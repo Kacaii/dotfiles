@@ -26,6 +26,7 @@ if status is-interactive
     alias tss='tmux split-window -v -c "#{pane_current_path}"'
     alias tsv='tmux split-window -h -c "#{pane_current_path}"'
     alias fcg='nvim ./.config/fish/config.fish'
+    alias wcg='nvim /mnt/c/Users/kacai/.wezterm.lua'
 
     # Disables fish_greeting
     set -g fish_greeting
