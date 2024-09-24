@@ -33,7 +33,7 @@ if status is-interactive
     set -g fish_greeting
 
     # Colored MAN Config
-    set -g man_bold -o cba6f7
+    set -g man_bold -o cba7f7
 
     # Sets fzf file search to < Ctrl + F > 
     # and fzf variables search to < Ctrl + Alt + V >
