@@ -30,7 +30,7 @@ if status is-interactive
     alias tsv='tmux split-window -h -c "#{pane_current_path}"'
     alias fcg='nvim ~/.config/fish/config.fish'
     alias tcg='nvim ~/.tmux.conf'
-    alias fzf='fzf --preview "prettybat --style=numbers --color=always {}"'
+    alias fzf='fzf --tmux center --preview "prettybat --style=numbers --color=always {}"'
 
     # Disables fish_greeting
     set -g fish_greeting
