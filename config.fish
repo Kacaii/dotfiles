@@ -1,35 +1,3 @@
-if status is-interactive
-
-    # Commands to run in interactive sessions can go here
-
-    # Adding stuff to Path
-    fish_add_path /snap/bin
-    fish_add_path "/home/kacaii/.bun/bin"
-    fish_add_path /home/linuxbrew/.linuxbrew/bin
-    fish_add_path /home/linuxbrew/.linuxbrew/sbin
-    fish_add_path /home/kacaii/.cargo/bin
-    fish_add_path $HOME/.local/bin
-
-    # Adding abbreviations
-    abbr cls clear
-    abbr v nvim
-    abbr vv nvim .
-    abbr bat bat --color=always
-    abbr pbat prettybat --color=always
-    abbr g git
-    abbr gc git clone
-    abbr ls lsd
-    abbr lla lsd -la
-    abbr ll lsd -l
-    abbr tk tmux kill-server
-
-    # Adding alias
-    alias uu='sudo apt update -y && sudo apt full-upgrade -y && brew upgrade' # Upgrade Packages and Updates Package Panager
-    alias tss='tmux split-window -v -c "#{pane_current_path}"'
-    alias tsv='tmux split-window -h -c "#{pane_current_path}"'
-    alias fcg='nvim ./.config/fish/config.fish'
-    alias tcg='nvim ~/.tmux.conf'
-
     # Disables fish_greeting
     set -g fish_greeting
 
@@ -45,11 +13,11 @@ if status is-interactive
 
     # Set up fzf colors
     set -Ux FZF_DEFAULT_OPTS "\
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#45475a \
---multi"
+        --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+        --color=selected-bg:#45475a \
+        --multi"
 
     # Yazi 'Q' setup
     function yy
