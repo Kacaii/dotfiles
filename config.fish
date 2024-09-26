@@ -1,3 +1,34 @@
+if status is-interactive
+
+    # Commands to run in interactive sessions can go here
+
+    # Adding stuff to Path
+
+    fish_add_path /snap/bin
+    fish_add_path /home/kacaii/.bun/bin
+    fish_add_path /home/linuxbrew/.linuxbrew/bin
+    fish_add_path /home/linuxbrew/.linuxbrew/sbin
+    fish_add_path /home/kacaii/.cargo/bin
+    fish_add_path /home/kacaii/.local/bin
+
+    # Adding abbreviations
+    abbr cls clear
+    abbr v nvim
+    abbr vv nvim .
+    abbr g git
+    abbr gc git clone
+    abbr gco git checkout
+    abbr ls lsd
+    abbr lla lsd -la
+    abbr ll lsd -l
+    abbr tk tmux kill-server
+
+    # Adding alias
+    alias uu='sudo apt update -y && sudo apt full-upgrade -y && brew upgrade' # Upgrade Packages and Updates Package Panager
+    alias tss='tmux split-window -v -c "#{pane_current_path}"'
+    alias tsv='tmux split-window -h -c "#{pane_current_path}"'
+    alias fcg='nvim ~/.config/fish/config.fish'
+    alias tcg='nvim ~/.tmux.conf'
     alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"'
     alias bat='prettybat --color=always'
 
