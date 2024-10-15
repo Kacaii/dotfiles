@@ -14,7 +14,6 @@ if status is-interactive
     abbr cls clear
     abbr v nvim
     abbr vv nvim .
-    abbr bat prettybat --color=always
     abbr g git
     abbr gc git clone
     abbr gco git checkout
@@ -31,6 +30,7 @@ if status is-interactive
     alias fcg='nvim ~/.config/fish/config.fish'
     alias tcg='nvim ~/.tmux.conf'
     alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"'
+    alias bat='prettybat --color=always --theme="Catppuccin Mocha"'
 
     # Disables fish_greeting 
     set -g fish_greeting
