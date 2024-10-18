@@ -6,6 +6,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Increment/decrement
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
+
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
@@ -14,7 +18,6 @@ keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
 
 keymap.del("n", "<C-f>")
-keymap.set("n", "<C-f>", ":FzfLua files<Return>", vim.tbl_extend("force", opts, { desc = "󰈞 Find Files" }))
 
 -- Diagnostics
 keymap.set("n", "<leader>xj", function()
