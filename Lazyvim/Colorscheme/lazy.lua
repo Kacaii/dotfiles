@@ -1,5 +1,5 @@
 require("catppuccin").setup({
-  flavour = "auto", -- latte, frappe, macchiato, mocha
+  flavour = "mocha", -- latte, frappe, macchiato, mocha
   background = { -- :h background
     light = "latte",
     dark = "mocha",
@@ -10,7 +10,7 @@ require("catppuccin").setup({
   dim_inactive = {
     enabled = true, -- dims the background color of inactive window
     shade = "dark",
-    percentage = 0.5, -- percentage of the shade to apply to the inactive window
+    percentage = 0.7, -- percentage of the shade to apply to the inactive window
   },
   no_italic = false, -- Force no italic
   no_bold = false, -- Force no bold
@@ -34,6 +34,7 @@ require("catppuccin").setup({
   custom_highlights = {},
   default_integrations = true,
   integrations = {
+    aerial = true,
     cmp = true,
     nvim_surround = true,
     dap = true,
@@ -59,7 +60,7 @@ require("catppuccin").setup({
     },
     illuminate = {
       enabled = true,
-      lsp = true,
+      lsp = false,
     },
     telescope = {
       enabled = true,
