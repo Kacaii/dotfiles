@@ -22,30 +22,11 @@ return {
     end,
   },
   {
-    -- Adding cmp-cmdline
     "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-cmdline" },
+    dependencies = { "hrsh7th/cmp-emoji" },
+    -- @param opts cmp.ConfigSchema
     opts = function(_, opts)
-      local cmp = require("cmp")
-
-      table.insert(opts.sources, { name = "cmdline" })
-
-      cmp.setup.cmdline({ "/", "?" }, {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = "buffer" },
-        },
-      })
-
-      -- Setup for `:` to use cmdline and path sources
-      cmp.setup.cmdline(":", {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-          { name = "path" },
-        }, {
-          { name = "cmdline" },
-        }),
-      })
+      table.insert(opts.sources, { name = "emoji" })
     end,
   },
 }
