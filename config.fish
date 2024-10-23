@@ -35,6 +35,8 @@ if status is-interactive
     # Disables fish_greeting 
     set -g fish_greeting
 
+    set BAT_THEME "Catppuccin Mocha"
+
     # Colored MAN Config  
     set -g man_bold -o cba7f7
 
