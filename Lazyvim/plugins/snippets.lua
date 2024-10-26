@@ -8,12 +8,17 @@ return {
 
     ls.add_snippets("javascript", {
 
-      s({ trig = "jsdoc", desc = "Documentation 󰷈" }, {
+      s({ trig = "jsd", desc = "Javascript Documentation  " }, {
         t({ "  /**", "  * " }),
         i(1),
         t({ "", "  * ", "  * " }),
         i(2),
-        t({ "", "  */ ", "" }),
+        t({ "", "  */ " }),
+      }),
+      s({ trig = "ijsd", desc = "Inline Javascript Documentation  " }, {
+        t({ "  /** " }),
+        i(1),
+        t({ " */" }),
       }),
     })
   end,
