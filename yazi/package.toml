@@ -1,0 +1,5 @@
+[plugin]
+deps = [{ use = "yazi-rs/plugins:full-border", rev = "ad52adf" }, { use = "Reledia/glow", rev = "f52b382" }, { use = "yazi-rs/plugins:git", rev = "ad52adf" }, { use = "Lil-Dank/lazygit", rev = "c82794f" }, { use = "AnirudhG07/plugins-yazi:copy-file-contents", rev = "f871a9c" }, { use = "GrzegorzKozub/mdcat", rev = "1706af4" }, { use = "dedukun/bookmarks", rev = "600f87c" }]
+
+[flavor]
+deps = []
