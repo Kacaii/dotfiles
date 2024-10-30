@@ -8,6 +8,6 @@ return {
       ["lazy.lua"] = { glyph = "", hl = "MiniIconsAzure" },
       ["yazi.toml"] = { glyph = "󰇥", hl = "MiniIconsYellow" },
     },
-    filetype = {},
+    extension = {},
   },
 }
