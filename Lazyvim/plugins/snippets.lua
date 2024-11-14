@@ -27,6 +27,9 @@ return {
         i(2),
         t({ "", "* ```" }),
       }),
+      s({ trig = "cc", desc = "Clear the Console 󰆍 " }, {
+        t("console.clear()"),
+      }),
     })
   end,
 }

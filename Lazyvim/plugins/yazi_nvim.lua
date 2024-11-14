@@ -12,7 +12,7 @@ return {
       -- Open in the current working directory
       "<leader>cw",
       "<cmd>Yazi cwd<cr>",
-      desc = "Open Yazi 󰇥 in CWD",
+      desc = " Open Yazi 󰇥 in CWD",
     },
     {
       "<c-up>",
