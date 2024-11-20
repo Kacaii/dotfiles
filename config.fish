@@ -13,10 +13,10 @@ if status is-interactive
     fish_add_path /home/kacaii/.local/bin
 
     # Adding abbreviations
-    abbr cls clear
+    abbr cls clear # Clear Screen
     abbr v nvim
-    abbr vv nvim .
-    abbr fvv 'nvim $(fzf)'
+    abbr vv nvim . # Open current directory in neovim
+    abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf
     abbr g git
     abbr gp git pull
     abbr gc ghq get
@@ -24,18 +24,42 @@ if status is-interactive
     abbr ls lsd
     abbr ll lsd -l
     abbr lla lsd -la
-    abbr llt lsd --tree --depth 2
-    abbr tk tmux kill-server
-    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"'
+    abbr llt lsd --tree --depth 2 # Tree view
+    abbr tk tmux kill-server # Kill tmux server
+    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme
     abbr tt tldr
+    abbr fcc fish_clipboard_copy # Copy to clipboard
 
     # Adding alias
     alias uu='sudo apt update -y && sudo apt full-upgrade -y && brew upgrade' # Upgrade Packages and Updates Package Panager
     alias tss='tmux split-window -v -c "#{pane_current_path}"'
     alias tsv='tmux split-window -h -c "#{pane_current_path}"'
-    alias fcg='nvim ~/.config/fish/config.fish'
-    alias tcg='nvim ~/.tmux.conf'
+    alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
+    alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
     alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"'
+
+    # Run `deno test` in a tmux session
+    function start_tmux_deno_testing
+        # Define the session name and window name
+        set session_name deno_testing
+        set window_name preview_tests
+
+        # Create or attach to the session
+        tmux new-session -A -d -s $session_name
+        tmux new-window -t $session_name -n $window_name
+
+        # Split the window vertically
+        tmux split-window -v -t $session_name:$window_name
+
+        # Run `deno test` in the preview window
+        tmux send-keys -t deno_testing:preview_tests.1 'deno test -A --watch' Enter
+
+        # Focus the upper pane
+        tmux select-pane -t deno_testing:preview_tests.0
+        #
+        # Attach to the session
+        tmux attach-session -t deno_testing
+    end
 
     set -gx EDITOR nvim
 
