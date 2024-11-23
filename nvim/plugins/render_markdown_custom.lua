@@ -6,7 +6,7 @@ return {
       sign = true,
       left_pad = 1,
       position = "inline",
-      icons = { "󰎤", "󰎧", "󰎪", "󰎭", "󰎱", "󰎳" },
+      icons = { "󰎤 ", "󰎧 ", "󰎪 ", "󰎭 ", "󰎱 ", "󰎳 " },
       signs = { "󰫎 " },
       border = false,
     },

@@ -61,6 +61,15 @@ if status is-interactive
         tmux attach-session -t deno_testing
     end
 
+    # Prints all files in current directory in pretty bat format
+    function bat_files
+        for file in *
+            if test -f $file
+                bat -P --color=always --theme="Catppuccin Mocha" $file
+            end
+        end
+    end
+
     set -gx EDITOR nvim
 
     # Colored MAN Config ' 
