@@ -39,6 +39,8 @@ return {
       custom_highlights = {},
       default_integrations = true,
       integrations = {
+        dashboard = true,
+        snacks = true,
         aerial = true,
         alpha = true,
         cmp = true,

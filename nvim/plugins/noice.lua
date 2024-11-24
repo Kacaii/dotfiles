@@ -12,16 +12,33 @@ return {
   },
 
   {
-    -- Disabling "No information available" notification
     "folke/noice.nvim",
     opts = function(_, opts)
-      table.insert(opts.routes, {
-        filter = {
-          event = "notify",
-          find = "No information available",
+      vim.list_extend(opts.routes, {
+        {
+          filter = {
+            event = "notify",
+            any = {
+              { find = "No information available" },
+            },
+          },
+          skip = true,
         },
-        opts = { skip = true },
       })
     end,
   },
+
+  -- {
+  --   -- Disabling "No information available" notification
+  --   "folke/noice.nvim",
+  --   opts = function(_, opts)
+  --     table.insert(opts.routes, {
+  --       filter = {
+  --         event = "notify",
+  --         find = "No information available",
+  --       },
+  --       opts = { skip = true },
+  --     })
+  --   end,
+  -- },
 }
