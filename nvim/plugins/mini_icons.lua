@@ -10,7 +10,7 @@ return {
     file = {
       ["deno.json"] = { glyph = "󰏓", hl = "MiniIconsOrange" },
       ["deno.lock"] = { glyph = "", hl = "MiniIconsBlue" },
-      ["README.md"] = { glyph = "", hl = "MiniIconsWhite" },
+      ["README.md"] = { glyph = "", hl = "MiniIconsCyan" },
       ["lazy.lua"] = { glyph = "󰒲", hl = "MiniIconsPurple" },
       ["autocmds.lua"] = { glyph = "", hl = "MiniIconsOrange" },
       ["options.lua"] = { glyph = "", hl = "MiniIconsOrange" },

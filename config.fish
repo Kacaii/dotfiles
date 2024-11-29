@@ -14,35 +14,60 @@ if status is-interactive
 
     # Adding abbreviations
     abbr cls clear # Clear Screen
-    abbr v nvim
-    abbr vv nvim . # Open current directory in neovim
+    abbr v nvim # Open nvim
+    abbr vv "nvim ." # Open current directory in neovim
     abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf
-    abbr g git
-    abbr gp git pull
-    abbr gc ghq get
-    abbr gco git checkout
-    abbr ls lsd
-    abbr ll lsd -l
-    abbr lla lsd -la
-    abbr llt lsd --tree --depth 2 # Tree view
-    abbr tk tmux kill-server # Kill tmux server
+    abbr g git # Git commands
+    abbr gg lazygit # Open lazygit GUI
+    abbr gp "git pull" # Pull
+    abbr gc "ghq get" fish_clipboard_paste # Clone the repository
+    abbr ls lsd # List directory
+    abbr ll "lsd -l" # List directory in long format
+    abbr lla "lsd -la" # List directory in long format with hidden files
+    abbr llt "lsd --tree --depth 2" # List directory in tree format
+    abbr tk "tmux kill-server" # Kill tmux server
     abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme
-    abbr tt tldr
+    abbr tt tldr # Shortcut to tldr
     abbr fcc fish_clipboard_copy # Copy to clipboard
 
     # Adding alias
     alias uu='sudo apt update -y && sudo apt full-upgrade -y && brew upgrade' # Upgrade Packages and Updates Package Panager
-    alias tss='tmux split-window -v -c "#{pane_current_path}"'
-    alias tsv='tmux split-window -h -c "#{pane_current_path}"'
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
-    alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"'
+    alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"' # Open fzf in TMUX
+
+    set -gx EDITOR nvim # Set EDITOR to nvim
+
+    # Colored MAN Config  '
+    set -g man_bold -o cba7f7
+
+    # Set up FZF integration
+    fzf --fish | source
+
+    # Set up FZF colors
+    set -Ux FZF_DEFAULT_OPTS "\
+      --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+      --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+      --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+      --color=selected-bg:#45475a \
+      --multi"
+
+    # Yazi 'Q' setup
+    function yy
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
+    end
 
     # Run `deno test` in a tmux session
     function start_tmux_deno_testing
+
         # Define the session name and window name
-        set session_name deno_testing
-        set window_name preview_tests
+        set -l session_name deno_testing
+        set -l window_name preview_tests
 
         # Create or attach to the session
         tmux new-session -A -d -s $session_name
@@ -56,7 +81,7 @@ if status is-interactive
 
         # Focus the upper pane
         tmux select-pane -t deno_testing:preview_tests.0
-        #
+
         # Attach to the session
         tmux attach-session -t deno_testing
     end
@@ -70,30 +95,42 @@ if status is-interactive
         end
     end
 
-    set -gx EDITOR nvim
+    # Generates a PARA structure in the current directory or a specified directory.
+    function generate_para
 
-    # Colored MAN Config ' 
-    set -g man_bold -o cba7f7
+        # Set the base directory
+        set -l base_dir (pwd)
 
-    # Set up fzf integration
-    fzf --fish | source
-
-    # Set up fzf colors
-    set -Ux FZF_DEFAULT_OPTS " \
-                --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-        --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-        --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-        --color=selected-bg:#45475a \
-        --multi"
-
-    # Yazi 'Q' setup
-    function yy
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            cd -- "$cwd"
+        # Checks if a base directory is provided
+        if test (count $argv) -gt 0
+            set base_dir $argv[1]
         end
-        rm -f -- "$tmp"
-    end
 
+        # Create a base directory if it doesn't exist
+        if not test -d $base_dir
+            mkdir -p $base_dir
+        end
+
+        echo "Generating PARA structure in: $base_dir"
+
+        # Define folder descriptions
+        set -l para_folders "01 PROJECTS" "02 AREAS" "03 RESOURCES" "04 ARCHIVE"
+        set -l para_descriptions \
+            "Stores notes and files for active, time-bound tasks or deliverables." \
+            "Contains ongoing responsibilities or areas of interest." \
+            "Holds general reference materials and reusable templates." \
+            "Keeps inactive projects and outdated resources for future reference."
+
+        # Create folders and add README.md with descriptions
+        for i in (seq (count $para_folders))
+            set -l folder $para_folders[$i]
+            set -l description $para_descriptions[$i]
+            mkdir -p "$base_dir/$folder"
+            echo "# $folder" >"$base_dir/$folder/README.md"
+            echo "$description" >>"$base_dir/$folder/README.md"
+        end
+
+        echo "PARA Structure Generated Successfully! "
+
+    end
 end
