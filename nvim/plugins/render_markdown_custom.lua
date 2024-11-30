@@ -3,7 +3,7 @@ return {
   opts = {
     heading = {
       enabled = true,
-      sign = true,
+      sign = false,
       left_pad = 1,
       position = "inline",
       icons = { "󰎤 ", "󰎧 ", "󰎪 ", "󰎭 ", "󰎱 ", "󰎳 " },
