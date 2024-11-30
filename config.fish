@@ -3,6 +3,13 @@ if status is-interactive
     # Disables fish_greeting 
     set -g fish_greeting ""
     set -gx TERM xterm-256color
+    set -gx EDITOR nvim # Set EDITOR to nvim
+
+    # Colored MAN Config  '
+    set -g man_bold -o cba7f7
+
+    # Set up FZF integration
+    fzf --fish | source
 
     # Adding stuff to Path  
     fish_add_path /snap/bin
@@ -36,14 +43,6 @@ if status is-interactive
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
     alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"' # Open fzf in TMUX
 
-    set -gx EDITOR nvim # Set EDITOR to nvim
-
-    # Colored MAN Config  '
-    set -g man_bold -o cba7f7
-
-    # Set up FZF integration
-    fzf --fish | source
-
     # Set up FZF colors
     set -Ux FZF_DEFAULT_OPTS "\
       --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -54,12 +53,14 @@ if status is-interactive
 
     # Yazi 'Q' setup
     function yy
+
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"
         if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
             cd -- "$cwd"
         end
         rm -f -- "$tmp"
+
     end
 
     # Run `deno test` in a tmux session
@@ -84,15 +85,18 @@ if status is-interactive
 
         # Attach to the session
         tmux attach-session -t deno_testing
+
     end
 
     # Prints all files in current directory in pretty bat format
     function bat_files
+
         for file in *
             if test -f $file
                 bat -P --color=always --theme="Catppuccin Mocha" $file
             end
         end
+
     end
 
     # Generates a PARA structure in the current directory or a specified directory.
