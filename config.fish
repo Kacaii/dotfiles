@@ -27,7 +27,7 @@ if status is-interactive
     abbr g git # Git commands
     abbr gg lazygit # Open lazygit GUI
     abbr gp "git pull" # Pull
-    abbr gc "ghq get" fish_clipboard_paste # Clone the repository
+    abbr gc "ghq get" # Clone the repository
     abbr ls lsd # List directory
     abbr ll "lsd -l" # List directory in long format
     abbr lla "lsd -la" # List directory in long format with hidden files
