@@ -18,16 +18,17 @@ if status is-interactive
     fish_add_path /home/linuxbrew/.linuxbrew/sbin
     fish_add_path /home/kacaii/.cargo/bin
     fish_add_path /home/kacaii/.local/bin
+    fish_add_path /home/kacaii/go/bin/
 
     # Adding abbreviations
     abbr cls clear # Clear Screen
     abbr v nvim # Open nvim
-    abbr vv "nvim ." # Open current directory in neovim
+    # abbr vv "nvim ." # Open current directory in neovim
     abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf
     abbr g git # Git commands
     abbr gg lazygit # Open lazygit GUI
     abbr gp "git pull" # Pull
-    abbr gc "ghq get" # Clone the repository
+    abbr gc "ghq get" # Clone repository
     abbr ls lsd # List directory
     abbr ll "lsd -l" # List directory in long format
     abbr lla "lsd -la" # List directory in long format with hidden files
@@ -38,10 +39,16 @@ if status is-interactive
     abbr fcc fish_clipboard_copy # Copy to clipboard
 
     # Adding alias
-    alias uu='sudo apt update -y && sudo apt full-upgrade -y && brew upgrade' # Upgrade Packages and Updates Package Panager
+    #
+    # Upgrade Packages and Updates Package Panager
+    alias uu='sudo apt update -y \
+      && sudo apt full-upgrade -y \
+      && brew upgrade \
+      && ya pack -u'
+
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
-    alias fzf='fzf --tmux 65% --preview "prettybat --style=numbers --color=always {}"' # Open fzf in TMUX
+    # alias fzf='fzf  --preview "prettybat --style=numbers --color=always {}"'
 
     # Set up FZF colors
     set -Ux FZF_DEFAULT_OPTS "\
@@ -51,8 +58,7 @@ if status is-interactive
       --color=selected-bg:#45475a \
       --multi"
 
-    # Yazi 'Q' setup
-    function yy
+    function yy # Yazi Q setup
 
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"
