@@ -4,3 +4,4 @@
 local opt = vim.opt
 
 opt.scrolloff = 25 -- Lines of context
+vim.g.snacks_animate = false
