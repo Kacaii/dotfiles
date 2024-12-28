@@ -1,19 +1,21 @@
 {
   "Basic Snippet Template": {
     "prefix": "newSnippet",
-    "description": "Adds a new snippet",
+    "description": "Adds a new snippet 󰘦 ",
     "body": [
+      "{",
       "\"${1:snippetname}\": {",
       "  \"prefix\": \"$2\",",
       "  \"description\": \"$3\",",
       "  \"body\": [\"$4\"]",
-      "}$0"
+      "}$0",
+      "}"
     ]
   },
 
-  "Add a new Snippet": {
+  "Add a new Snippet to the list": {
     "prefix": "addSnippet",
-    "description": "Adds a new snippet after the current one",
+    "description": "Adds a new snippet in the file 󰘦 ",
     "body": [
       ",",
       "",
