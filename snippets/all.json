@@ -17,6 +17,7 @@
     "description": "Snippet for creating a simple file tree view inside a codeblock  ",
     "body": [
       "```plaintext",
+      "${1:Root Directory/}",
       "│",
       "├── ${2:Level 1 Nested Directory/}",
       "│   └── ${3:Level 2 Nested Directory/}",
