@@ -6,11 +6,12 @@ return {
     extension = {
       db = { glyph = "", hl = "MiniIconsBlue" },
       sqlite = { glyph = "", hl = "MiniIconsBlue" },
+      fish = { glyph = "󰈺", hl = "MiniIconsGreen" },
     },
     file = {
       ["deno.json"] = { glyph = "󰏓", hl = "MiniIconsOrange" },
       ["deno.lock"] = { glyph = "", hl = "MiniIconsBlue" },
-      ["README.md"] = { glyph = "", hl = "MiniIconsCyan" },
+      ["README.md"] = { glyph = "󰂺", hl = "MiniIconsWhite" },
       ["lazy.lua"] = { glyph = "󰒲", hl = "MiniIconsPurple" },
       ["core.lua"] = { glyph = "", hl = "MiniIconsOrange" },
       ["autocmds.lua"] = { glyph = "", hl = "MiniIconsOrange" },

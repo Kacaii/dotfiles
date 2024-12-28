@@ -1,0 +1,28 @@
+{
+  "Tree view": {
+    "prefix": "llt",
+    "description": "Snippet for creating a simple file tree view  ",
+    "body": [
+      "${1:Root Directory/}",
+      "│",
+      "├── ${2:Level 1 Nested Directory/}",
+      "│   └── ${3:Level 2 Nested Directory/}",
+      "│",
+      "└── README.md"
+    ]
+  },
+
+  "Tree view inside a codeblock": {
+    "prefix": "llt_cb",
+    "description": "Snippet for creating a simple file tree view inside a codeblock  ",
+    "body": [
+      "```plaintext",
+      "│",
+      "├── ${2:Level 1 Nested Directory/}",
+      "│   └── ${3:Level 2 Nested Directory/}",
+      "│",
+      "└── README.md",
+      "```"
+    ]
+  }
+}

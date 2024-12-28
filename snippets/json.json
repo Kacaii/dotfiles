@@ -1,0 +1,27 @@
+{
+  "Basic Snippet Template": {
+    "prefix": "newSnippet",
+    "description": "Adds a new snippet",
+    "body": [
+      "\"${1:snippetname}\": {",
+      "  \"prefix\": \"$2\",",
+      "  \"description\": \"$3\",",
+      "  \"body\": [\"$4\"]",
+      "}$0"
+    ]
+  },
+
+  "Add a new Snippet": {
+    "prefix": "addSnippet",
+    "description": "Adds a new snippet after the current one",
+    "body": [
+      ",",
+      "",
+      "\"${1:snippetname}\": {",
+      "  \"prefix\": \"$2\",",
+      "  \"description\": \"$3\",",
+      "  \"body\": [\"$4\"]",
+      "}$0"
+    ]
+  }
+}

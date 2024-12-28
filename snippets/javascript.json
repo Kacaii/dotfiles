@@ -1,0 +1,25 @@
+{
+  "Console Clear": {
+    "prefix": "cc",
+    "description": "Clears the Console 󰆍 ",
+    "body": ["console.clear()"]
+  },
+
+  "Add Documentation": {
+    "prefix": "jsd",
+    "description": "Add Javascript Documentation  ",
+    "body": ["/**", " * $1", " * ", " * $2", " * ", " */ "]
+  },
+
+  "Add Inline Documentation": {
+    "prefix": "ijsd",
+    "description": "Add Inline Javascript Documentation  ",
+    "body": ["/** $1 */"]
+  },
+
+  "Add Codeblock": {
+    "prefix": "cdb",
+    "description": "Add CodeBlock to documentation   ",
+    "body": ["```$1", "* ", "* ", "* ```"]
+  }
+}
