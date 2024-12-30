@@ -37,6 +37,7 @@ return {
 		color_overrides = {},
 		custom_highlights = function(colors)
 			return {
+				Comment = { fg = colors.overlay0 },
 				Pmenu = { fg = colors.text, bg = colors.base },
 				PmenuSel = { fg = colors.text, bg = colors.surface0 },
 				-- PmenuThumb = { bg = colors.text },
