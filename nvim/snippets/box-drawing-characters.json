@@ -8,7 +8,7 @@
   "Double Line Box Bottom Border": {
     "prefix": "dblbox-bot",
     "description": "Draw a double-line bottom border: ╚ ╩ ╝",
-    "body": ["${1|╚,╩,╝|"]
+    "body": ["${1|╚,╩,╝|}"]
   },
 
   "Double Line Box Full": {
