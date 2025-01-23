@@ -1,7 +1,12 @@
 return {
   "LazyVim/LazyVim",
   opts = {
-    icons = {},
+    icons = {
+      kinds = {
+        Enum = "󱃥 ",
+        EnumMember = "󰈚 ",
+      },
+    },
   },
 }
 

@@ -37,11 +37,18 @@ return {
     color_overrides = {},
     custom_highlights = function(colors)
       return {
+        -- Making the comments less distracting
         Comment = { fg = colors.overlay0 },
+
         Pmenu = { fg = colors.text, bg = colors.base },
         PmenuSel = { fg = colors.text, bg = colors.surface0 },
         -- PmenuThumb = { bg = colors.text },
+
+        -- Making the float window same color as the bg
         NormalFloat = { fg = colors.text, bg = colors.base },
+
+        -- Painting the icons for enums
+        BlinkCmpKindEnumMember = { fg = colors.yellow },
       }
     end,
     default_integrations = true,
