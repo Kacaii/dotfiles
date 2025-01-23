@@ -7,6 +7,10 @@
         "path": "./all.json"
       },
       {
+        "language": "all",
+        "path": "./box-drawing-characters.json"
+      },
+      {
         "language": "",
         "path": "./terminal-modes.json"
       },
