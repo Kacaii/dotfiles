@@ -7,6 +7,22 @@
         "path": "./all.json"
       },
       {
+        "language": "",
+        "path": "./terminal-modes.json"
+      },
+      {
+        "language": "",
+        "path": "./terminal-colors.json"
+      },
+      {
+        "language": "",
+        "path": "./terminal-cursor-controls.json"
+      },
+      {
+        "language": "",
+        "path": "./terminal-general-ascii.json"
+      },
+      {
         "language": "json",
         "path": "./json.json"
       },
@@ -17,6 +33,10 @@
       {
         "language": "typescript",
         "path": "./typescript.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
       }
     ]
   }

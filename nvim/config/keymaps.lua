@@ -17,8 +17,6 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "ss", ":vsplit<Return>", opts)
 keymap.set("n", "sv", ":split<Return>", opts)
 
-keymap.del("n", "<C-f>")
-
 -- Diagnostics
 keymap.set("n", "<leader>xj", function()
   vim.diagnostic.goto_next()

@@ -1,0 +1,25 @@
+{
+  "Handle errors": {
+    "prefix": "iferr",
+    "description": "Checks if there is an error  ",
+    "body": ["if err != nil {", "  $0", "}"]
+  },
+
+  "Add package and func main": {
+    "prefix": "ma",
+    "description": "Add Package main and func main() 󰊕",
+    "body": ["package main", "", "func main() {", "  $0", "}"]
+  },
+
+  "Pointer to Testing.T": {
+    "prefix": "tt",
+    "description": "A pointer to testing.T 󰙨",
+    "body": ["t *testing.T"]
+  },
+
+  "Got and Want": {
+    "prefix": "gw",
+    "description": "got and want snippet for tests 󰙨",
+    "body": ["got := $1", "want := $2", "", "if got != want {", "  $0", "}"]
+  }
+}

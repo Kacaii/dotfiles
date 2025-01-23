@@ -1,0 +1,73 @@
+{
+  "RESET": {
+    "prefix": "ANSI_MODES_RESET",
+    "description": "Reset all colors and modes 󰜉 ",
+    "body": ["\"\\x1b[0m\""]
+  },
+
+  "BOLD": {
+    "prefix": "ANSI_MODES_BOLD",
+    "description": "Set or Remove Bold mode  ",
+    "body": ["\"\\x1b[${1|1,22|}m\""]
+  },
+
+  "DIM": {
+    "prefix": "ANSI_MODES_DIM",
+    "description": "Set or Remove Dim / Faint mode  ",
+    "body": ["\"\\x1b[${1|2,22|}m\""]
+  },
+
+  "FAINT": {
+    "prefix": "ANSI_MODES_FAINT",
+    "description": "Set or Remove Dim / Faint mode  ",
+    "body": ["\"\\x1b[${1|2,22|}m\""]
+  },
+
+  "ITALIC": {
+    "prefix": "ANSI_MODES_ITALIC",
+    "description": "Set or Remove Italic mode  ",
+    "body": ["\"\\x1b[${1|3,23|}m\""]
+  },
+
+  "UNDERLINE": {
+    "prefix": "ANSI_MODES_UNDERLINE",
+    "description": "Set or Remove Underline mode  ",
+    "body": ["\"\\x1b[${1|4,24|}m\""]
+  },
+
+  "BLINKING": {
+    "prefix": "ANSI_MODES_BLINKING",
+    "description": "Set or Remove Blinking mode  ",
+    "body": ["\"\\x1b[${1|5,25|}m\""]
+  },
+
+  "INVERSE": {
+    "prefix": "ANSI_MODES_INVERSE",
+    "description": "Set or Remove Inverse / Reverse mode  ",
+    "body": ["\"\\x1b[${1|7,27|}m\""]
+  },
+
+  "REVERSE": {
+    "prefix": "ANSI_MODES_REVERSE",
+    "description": "Set or Remove Inverse / Reverse mode  ",
+    "body": ["\"\\x1b[${1|7,27|}m\""]
+  },
+
+  "HIDDEN": {
+    "prefix": "ANSI_MODES_HIDDEN",
+    "description": "Set or Remove Hidden / Invisible mode  ",
+    "body": ["\"\\x1b[${1|8,28|}m\""]
+  },
+
+  "INVISIBLE": {
+    "prefix": "ANSI_MODES_INVISIBLE",
+    "description": "Set or Remove Hidden / Invisible mode  ",
+    "body": ["\"\\x1b[${1|8,28|}m\""]
+  },
+
+  "STRIKETHROUGH": {
+    "prefix": "ANSI_MODES_STRIKETHROUGH",
+    "description": "Set or Remove strikethrough mode  ",
+    "body": ["\"\\x1b[${1|9,29|}m\""]
+  }
+}

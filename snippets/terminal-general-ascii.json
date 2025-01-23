@@ -1,0 +1,7 @@
+{
+  "BELL": {
+    "prefix": "ANSI_BELL",
+    "description": "Terminal Bell 󰂞 ",
+    "body": ["\"\\u0007\""]
+  }
+}

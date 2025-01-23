@@ -1,0 +1,61 @@
+{
+  "HIDE": {
+    "prefix": "ANSI_CURSOR_VISIBILITY_HIDE",
+    "description": "Makes the Cursor invisible 󰈉 ",
+    "body": ["\"\\x1b[?25l\""]
+  },
+
+  "SHOW": {
+    "prefix": "ANSI_CURSOR_VISIBILITY_SHOW",
+    "description": "Makes the Cursor visible 󰈈 ",
+    "body": ["\"\\x1b[?25h\""]
+  },
+
+  "HOME": {
+    "prefix": "ANSI_CURSOR_MOVE_HOME",
+    "description": "Moves the Cursor to Home position ( 0, 0 )  ",
+    "body": ["\"\\x1b[H\""]
+  },
+
+  "MOVE_UP": {
+    "prefix": "ANSI_CURSOR_MOVE_UP",
+    "description": "Moves the Cursor UP # Lines  ",
+    "body": ["\"\\x1b[$1A\""]
+  },
+
+  "MOVE_DOWN": {
+    "prefix": "ANSI_CURSOR_MOVE_DOWN",
+    "description": "Moves the Cursor DOWN # Lines  ",
+    "body": ["\"\\x1b[$1B\""]
+  },
+
+  "MOVE_RIGHT": {
+    "prefix": "ANSI_CURSOR_MOVE_RIGHT",
+    "description": "Moves the Cursor RIGHT # Columns  ",
+    "body": ["\"\\x1b[$1C\""]
+  },
+
+  "MOVE_LEFT": {
+    "prefix": "ANSI_CURSOR_MOVE_LEFT",
+    "description": "Moves the Cursor LEFT # Columns  ",
+    "body": ["\"\\x1b[$1D\""]
+  },
+
+  "MOVE_NEXT_LINE": {
+    "prefix": "ANSI_CURSOR_MOVE_NEXT_LINE",
+    "description": "Moves the Cursor to the Beginning of the next Line, # Lines Down 󰒭 ",
+    "body": ["\"\\x1b[$1E\""]
+  },
+
+  "MOVE_PREVIOUS_LINE": {
+    "prefix": "ANSI_CURSOR_MOVE_PREVIOUS_LINE",
+    "description": "Moves the Cursor to the Beginning of the previous Line, # Lines Up 󰒮 ",
+    "body": ["\"\\x1b[$1F\""]
+  },
+
+  "MOVE_COLUMN": {
+    "prefix": "ANSI_CURSOR_MOVE_COLUMN",
+    "description": "Moves the Cursor to Column #  ",
+    "body": ["\"\\x1b[$1G\""]
+  }
+}

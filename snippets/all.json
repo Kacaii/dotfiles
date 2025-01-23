@@ -13,7 +13,7 @@
   },
 
   "Tree view inside a codeblock": {
-    "prefix": "llt_cb",
+    "prefix": "lltcb",
     "description": "Snippet for creating a simple file tree view inside a codeblock  ",
     "body": [
       "```plaintext",
