@@ -1,73 +1,49 @@
 {
-  "Double Line Box Top Border": {
-    "prefix": "dblbox-top",
-    "description": "Draw a double-line top border",
-    "body": ["${1|╔,╦,╗|}"]
+  "Horizontal": {
+    "prefix": "box_h",
+    "description": "",
+    "body": ["${1|─,━,┄,┅,┈,┉|}"]
   },
 
-  "Double Line Box Bottom Border": {
-    "prefix": "dblbox-bot",
-    "description": "Draw a double-line bottom border",
-    "body": ["${1|╚,╩,╝|}"]
+  "Vertical": {
+    "prefix": "box_v",
+    "description": "",
+    "body": ["${1|│,┃,┆,┇,┊,┋|}"]
   },
 
-  "Double Line Box Full": {
-    "prefix": "dblbox-full",
-    "description": "Draw a double-line box with a customizable size",
-    "body": ["╔$1════════╗", "║$2        ║", "╚════════╝"]
+  "Down and Right": {
+    "prefix": "box_dr",
+    "description": "",
+    "body": ["${1|┌,┍,┎,┏|}"]
   },
 
-  "Single Line Box Top Border": {
-    "prefix": "snglbox-top",
-    "description": "Draw a single-line top border",
-    "body": ["${1|╭,┌,┬,┐,╮|}"]
+  "Down and Left": {
+    "prefix": "box_dl",
+    "description": "",
+    "body": ["${1|┐,┑,┒,┓|}"]
   },
 
-  "Single Line Box Bottom Border": {
-    "prefix": "snglbox-bot",
-    "description": "Draw a single-line bottom border",
-    "body": ["${1|╰,└,┴,┘,╯|}"]
+  "Up and Right": {
+    "prefix": "box_ur",
+    "description": "",
+    "body": ["${1|└,┕,┖,┗,|}"]
   },
 
-  "Single Line Box Full": {
-    "prefix": "snglbox-full",
-    "description": "Draw a single-line box with a customizable size",
-    "body": ["┌$1────────┐", "│$2        │", "└────────┘"]
+  "Up and Left": {
+    "prefix": "box_ul",
+    "description": "",
+    "body": ["${1|┘,┙,┚,┛|}"]
   },
 
-  "Horizontal Divider Double Line": {
-    "prefix": "hr-dbl",
-    "description": "Horizontal divider with double line",
-    "body": ["═════════════"]
+  "Vertical and Right": {
+    "prefix": "box_vr",
+    "description": "",
+    "body": ["${1|├,┝,┞,┟,┠,┡,┢,┣|}"]
   },
 
-  "Horizontal Divider Single Line": {
-    "prefix": "hr-sngl",
-    "description": "Horizontal divider with single line",
-    "body": ["─────────────"]
-  },
-
-  "Vertical Divider Double Line": {
-    "prefix": "vr-dbl",
-    "description": "Vertical divider with double line",
-    "body": ["║$1║"]
-  },
-
-  "Vertical Divider Single Line": {
-    "prefix": "vr-sngl",
-    "description": "Vertical divider with single line",
-    "body": ["│$1│"]
-  },
-
-  "Cross Junction Double Line": {
-    "prefix": "cross-dbl",
-    "description": "Double-line cross junction",
-    "body": ["╬$1╬$2╬"]
-  },
-
-  "Cross Junction Single Line": {
-    "prefix": "cross-sngl",
-    "description": "Single-line cross junction",
-    "body": ["┼$1┼$2┼"]
+  "Vertical and Left": {
+    "prefix": "box_vl",
+    "description": "",
+    "body": ["${1|┤,┥,┦,┧,┨,┩,┪,┫|}"]
   }
 }
