@@ -2,48 +2,78 @@
   "Horizontal": {
     "prefix": "box_h",
     "description": "",
-    "body": ["${1|─,━,┄,┅,┈,┉|}"]
+    "body": ["${1|─,━,┄,┅,┈,┉,╌,╍,═|}"]
   },
 
   "Vertical": {
     "prefix": "box_v",
     "description": "",
-    "body": ["${1|│,┃,┆,┇,┊,┋|}"]
+    "body": ["${1|│,┃,┆,┇,┊,┋,╎,╏,║|}"]
   },
 
   "Down and Right": {
     "prefix": "box_dr",
     "description": "",
-    "body": ["${1|┌,┍,┎,┏|}"]
+    "body": ["${1|┌,┍,┎,┏,╒,╓,╔,╭|}"]
   },
 
   "Down and Left": {
     "prefix": "box_dl",
     "description": "",
-    "body": ["${1|┐,┑,┒,┓|}"]
+    "body": ["${1|┐,┑,┒,┓,╕,╖,╗,╮|}"]
   },
 
   "Up and Right": {
     "prefix": "box_ur",
     "description": "",
-    "body": ["${1|└,┕,┖,┗,|}"]
+    "body": ["${1|└,┕,┖,┗,╘,╙,╚,╰|}"]
   },
 
   "Up and Left": {
     "prefix": "box_ul",
     "description": "",
-    "body": ["${1|┘,┙,┚,┛|}"]
+    "body": ["${1|┘,┙,┚,┛,╛,╜,╝,╯|}"]
   },
 
   "Vertical and Right": {
     "prefix": "box_vr",
     "description": "",
-    "body": ["${1|├,┝,┞,┟,┠,┡,┢,┣|}"]
+    "body": ["${1|├,┝,┞,┟,┠,┡,┢,┣,╞,╟,╠|}"]
   },
 
   "Vertical and Left": {
     "prefix": "box_vl",
     "description": "",
-    "body": ["${1|┤,┥,┦,┧,┨,┩,┪,┫|}"]
+    "body": ["${1|┤,┥,┦,┧,┨,┩,┪,┫,╡,╢,╣|}"]
+  },
+
+  "Down and Horizontal": {
+    "prefix": "box_dh",
+    "description": "",
+    "body": ["${1|┬,┭,┮,┯,┰,┱,┲,┳,╤,╥,╦|}"]
+  },
+
+  "Up and Horizontal": {
+    "prefix": "box_uh",
+    "description": "",
+    "body": ["${1|┴,┵,┶,┷,┸,┹,┺,┻,╧,╨,╩|}"]
+  },
+
+  "Vertical and Horizontal": {
+    "prefix": "box_vh",
+    "description": "",
+    "body": ["${1|┼,┽,┾,┿,╀,╁,╂,╃,╄,╅,╆,╇,╈,╉,╊,╋,╪,╫,╬|}"]
+  },
+
+  "Diagonal": {
+    "prefix": "box_diag",
+    "description": "",
+    "body": ["${1|╱,╲,╳|}"]
+  },
+
+  "Directions": {
+    "prefix": "box_dir",
+    "description": "",
+    "body": ["${1|╴,╵,╶,╷,╸,╹,╺,╻,╼,╽,╾,╿|}"]
   }
 }
