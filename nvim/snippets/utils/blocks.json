@@ -1,0 +1,19 @@
+{
+  "Full Block": {
+    "prefix": "fblk",
+    "description": "Full Block",
+    "body": ["█"]
+  },
+
+  "Medium shade block": {
+    "prefix": "msblk",
+    "description": "Medium shade block",
+    "body": ["▒"]
+  },
+
+  "Light shade block": {
+    "prefix": "lsblk",
+    "description": "Light shade block",
+    "body": ["░"]
+  }
+}

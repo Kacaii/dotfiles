@@ -8,39 +8,43 @@
       },
       {
         "language": "all",
-        "path": "./box-drawing-characters.json"
+        "path": "./utils/box-drawing-characters.json"
+      },
+      {
+        "language": "all",
+        "path": "./utils/blocks.json"
       },
       {
         "language": "",
-        "path": "./terminal-modes.json"
+        "path": "./terminal-escape-codes/terminal-modes.json"
       },
       {
         "language": "",
-        "path": "./terminal-colors.json"
+        "path": "./terminal-escape-codes/terminal-colors.json"
       },
       {
         "language": "",
-        "path": "./terminal-cursor-controls.json"
+        "path": "./terminal-escape-codes/terminal-cursor-controls.json"
       },
       {
         "language": "",
-        "path": "./terminal-general-ascii.json"
+        "path": "./terminal-escape-codes/terminal-general-ascii.json"
       },
       {
         "language": "json",
-        "path": "./json.json"
+        "path": "./languages/json.json"
       },
       {
         "language": "javascript",
-        "path": "./javascript.json"
+        "path": "./languages/javascript.json"
       },
       {
         "language": "typescript",
-        "path": "./typescript.json"
+        "path": "./languages/typescript.json"
       },
       {
         "language": "go",
-        "path": "./go.json"
+        "path": "./languages/go.json"
       }
     ]
   }
