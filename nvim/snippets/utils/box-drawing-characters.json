@@ -11,6 +11,12 @@
     "body": ["${1|│,┃,┆,┇,┊,┋,╎,╏,║|}"]
   },
 
+  "Vertical and Horizontal": {
+    "prefix": "box_v_h",
+    "description": "",
+    "body": ["${1|┼,┽,┾,┿,╀,╁,╂,╃,╄,╅,╆,╇,╈,╉,╊,╋,╪,╫,╬|}"]
+  },
+
   "Down and Right": {
     "prefix": "box_dr",
     "description": "",
@@ -36,33 +42,27 @@
   },
 
   "Vertical and Right": {
-    "prefix": "box_vr",
+    "prefix": "box_v_r",
     "description": "",
     "body": ["${1|├,┝,┞,┟,┠,┡,┢,┣,╞,╟,╠|}"]
   },
 
   "Vertical and Left": {
-    "prefix": "box_vl",
+    "prefix": "box_v_l",
     "description": "",
     "body": ["${1|┤,┥,┦,┧,┨,┩,┪,┫,╡,╢,╣|}"]
   },
 
-  "Down and Horizontal": {
-    "prefix": "box_dh",
-    "description": "",
-    "body": ["${1|┬,┭,┮,┯,┰,┱,┲,┳,╤,╥,╦|}"]
-  },
-
-  "Up and Horizontal": {
-    "prefix": "box_uh",
+  "Horizontal and Up": {
+    "prefix": "box_h_u",
     "description": "",
     "body": ["${1|┴,┵,┶,┷,┸,┹,┺,┻,╧,╨,╩|}"]
   },
 
-  "Vertical and Horizontal": {
-    "prefix": "box_vh",
+  "Horizontal and Down": {
+    "prefix": "box_h_d",
     "description": "",
-    "body": ["${1|┼,┽,┾,┿,╀,╁,╂,╃,╄,╅,╆,╇,╈,╉,╊,╋,╪,╫,╬|}"]
+    "body": ["${1|┬,┭,┮,┯,┰,┱,┲,┳,╤,╥,╦|}"]
   },
 
   "Diagonal": {

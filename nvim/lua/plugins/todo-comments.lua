@@ -1,5 +1,5 @@
 --- Useful for storing the hexadeximal values
-Mocha = {
+local Mocha = {
   Blue = "#89b4fa",
   Flamingo = "#f2cdcd",
   Green = "#a6e3a1",
@@ -9,17 +9,19 @@ Mocha = {
   Pink = "#f5c2e7",
   Red = "#f38ba8",
   Text = "#cdd6f4",
+  Yellow = "#f9e2af",
 }
 
 return {
   "folke/todo-comments.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
+
     keywords = {
       CAUTION = { icon = "󰒡", color = Mocha.Red },
       NOTE = { icon = "", color = Mocha.Text },
-      TEST = { icon = "󰙨", color = Mocha.Text },
-      TODO = { icon = "", color = Mocha.Mauve },
+      TEST = { icon = "󰙨", color = Mocha.Mauve },
+      TODO = { icon = "󱨰", color = Mocha.Blue },
     },
   },
 }

@@ -35,22 +35,29 @@ return {
       -- miscs = {}, -- Uncomment to turn off hard-coded styles
     },
     color_overrides = {},
+
     custom_highlights = function(colors)
       return {
         -- Making the comments less distracting
-        Comment = { fg = colors.overlay0 },
+        Comment = { fg = colors.overlay0 }, -- #6c7086
 
-        Pmenu = { fg = colors.text, bg = colors.base },
-        PmenuSel = { fg = colors.text, bg = colors.surface0 },
+        Pmenu = { fg = colors.text, bg = colors.base }, -- #cdd6f4 #1e1e2e
+        PmenuSel = { fg = colors.text, bg = colors.surface0 }, -- #cdd6f4 #313244
         -- PmenuThumb = { bg = colors.text },
 
         -- Making the float window same color as the bg
-        NormalFloat = { fg = colors.text, bg = colors.base },
+        NormalFloat = { fg = colors.text, bg = colors.base }, -- #cdd6f4 #1e1e2e
 
-        -- Painting the icons for enums
-        BlinkCmpKindEnumMember = { fg = colors.yellow },
+        BlinkCmpKindStruct = { fg = colors.yellow }, -- #f9e2af
+        BlinkCmpKindEnum = { fg = colors.yellow }, -- #f9e2af
+        BlinkCmpKindEnumMember = { fg = colors.peach }, -- #fab387
+        -- BlinkCmpKindMethod = { fg = colors.mauve }, -- #cba6f7
+
+        YankyYanked = { fg = colors.base, bg = colors.peach }, -- #1e1e2e #fab387
+        YankyPut = { fg = colors.base, bg = colors.peach }, -- #1e1e2e #fab387
       }
     end,
+
     default_integrations = true,
     integrations = {
       aerial = true,

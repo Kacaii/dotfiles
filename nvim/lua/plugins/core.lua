@@ -2,9 +2,28 @@ return {
   "LazyVim/LazyVim",
   opts = {
     icons = {
+
+      -- 󰩂 Diagnostics.
+      diagnostics = {
+        Error = " ",
+        Warn = " ",
+        Hint = " ",
+        Info = "󱁯 ",
+      },
+
+      --  Git Diff.
+      git = {
+        added = " ",
+        modified = " ",
+        removed = " ",
+      },
+
+      --  Icons for Completion.
       kinds = {
-        Enum = "󱃥 ",
-        EnumMember = "󰈚 ",
+        Enum = "󰈲 ",
+        EnumMember = " ",
+        Variable = "󰫧 ",
+        Text = " ",
       },
     },
   },
