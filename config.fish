@@ -12,32 +12,28 @@ if status is-interactive
     fzf --fish | source
 
     # Adding stuff to Path 
-    fish_add_path /snap/bin
-    fish_add_path /home/kacaii/custom-scripts/
     fish_add_path /home/kacaii/.bun/bin
-    fish_add_path /home/linuxbrew/.linuxbrew/bin
-    fish_add_path /home/linuxbrew/.linuxbrew/sbin
     fish_add_path /home/kacaii/.cargo/bin
     fish_add_path /home/kacaii/.local/bin
+    fish_add_path /home/kacaii/custom-scripts/
     fish_add_path /home/kacaii/go/bin/
+    fish_add_path /home/linuxbrew/.linuxbrew/bin
+    fish_add_path /home/linuxbrew/.linuxbrew/sbin
+    fish_add_path /snap/bin
 
     # Adding abbreviations
-    abbr cls clear # Clear Screen - 
-    abbr v nvim # Open nvim - 
-    # abbr vv "nvim ." # Open current directory in neovim
-    abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf
-    abbr g git # Git commands - 󰊢
-    abbr gg lazygit # Open lazygit GUI - 󰊢
-    abbr gp "git pull" # Pull - 󰊢
-    abbr gc "ghq get" # Clone repository - 󰊢
-    abbr ls lsd # List directory
-    abbr ll "lsd -l" # List directory in long format
-    abbr lla "lsd -la" # List directory in long format with hidden files
-    abbr llt "lsd --tree --depth 2" # List directory in tree format
-    abbr tk "tmux kill-server" # Kill tmux server
-    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme
+    abbr cls clear # Clear Screen 
+    abbr fcc fish_clipboard_copy # Copy to clipboard 
+    abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf 󰱼
+    abbr g git # Git commands 󰊢
+    abbr gc "ghq get" # Clone repository 󰊢
+    abbr gg lazygit # Open lazygit GUI 󰊢
+    abbr gp "git pull" # Pull 󰊢
+    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme 
+    abbr tk "tmux kill-server" # Kill tmux server 
     abbr tt tmux # Shortcut to tmux 
-    abbr fcc fish_clipboard_copy # Copy to clipboard
+    abbr v nvim # Open nvim 
+    abbr vv "nvim ." # Open current directory in neovim 
 
     # Upgrade Packages and Updates Package Panager
     alias uu='\
@@ -59,39 +55,12 @@ if status is-interactive
       --multi"
 
     function yy # Yazi Q setup 󰇥
-
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"
         if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
             cd -- "$cwd"
         end
         rm -f -- "$tmp"
-
-    end
-
-    # Run `deno test` in a tmux session
-    function start_tmux_deno_testing
-
-        # Define the session name and window name
-        set -l session_name deno_testing
-        set -l window_name preview_tests
-
-        # Create or attach to the session
-        tmux new-session -A -d -s $session_name
-        tmux new-window -t $session_name -n $window_name
-
-        # Split the window vertically
-        tmux split-window -v -t $session_name:$window_name
-
-        # Run `deno test` in the preview window
-        tmux send-keys -t deno_testing:preview_tests.1 'deno test -A --watch' Enter
-
-        # Focus the upper pane
-        tmux select-pane -t deno_testing:preview_tests.0
-
-        # Attach to the session
-        tmux attach-session -t deno_testing
-
     end
 
     # Prints all files in current directory in pretty bat format
