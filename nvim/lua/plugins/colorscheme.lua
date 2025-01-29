@@ -51,7 +51,6 @@ return {
         BlinkCmpKindStruct = { fg = colors.yellow }, -- #f9e2af
         BlinkCmpKindEnum = { fg = colors.yellow }, -- #f9e2af
         BlinkCmpKindEnumMember = { fg = colors.peach }, -- #fab387
-        -- BlinkCmpKindMethod = { fg = colors.mauve }, -- #cba6f7
 
         YankyYanked = { fg = colors.base, bg = colors.peach }, -- #1e1e2e #fab387
         YankyPut = { fg = colors.base, bg = colors.peach }, -- #1e1e2e #fab387
