@@ -1,6 +1,6 @@
 return {
-  "catppuccin",
-  -- name = "catppuccin",
+  "catppuccin/nvim",
+  name = "catppuccin",
   priority = 1000,
   opts = {
     flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -20,15 +20,15 @@ return {
     no_bold = false, -- Force no bold
     no_underline = false, -- Force no underline
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-      comments = {}, -- Change the style of comments
-      conditionals = { "italic" },
+      comments = {},
+      conditionals = {},
       loops = {},
       functions = {},
       keywords = {},
       strings = {},
       variables = {},
       numbers = {},
-      booleans = { "italic" },
+      booleans = {},
       properties = {},
       types = {},
       operators = {},
@@ -39,34 +39,39 @@ return {
     custom_highlights = function(colors)
       return {
         -- Making the comments less distracting
-        Comment = { fg = colors.overlay0 }, -- #6c7086
+        Comment = { fg = colors.overlay0 },
 
-        Pmenu = { fg = colors.text, bg = colors.base }, -- #cdd6f4 #1e1e2e
-        PmenuSel = { fg = colors.text, bg = colors.surface0 }, -- #cdd6f4 #313244
+        Pmenu = { bg = colors.none },
+        PmenuSel = { fg = colors.text, bg = colors.surface0 },
         -- PmenuThumb = { bg = colors.text },
 
-        -- Making the float window same color as the bg
-        NormalFloat = { fg = colors.text, bg = colors.base }, -- #cdd6f4 #1e1e2e
+        -- Making the float window same color as the bg.
+        NormalFloat = { fg = colors.text, bg = colors.none },
 
-        BlinkCmpKindStruct = { fg = colors.yellow }, -- #f9e2af
-        BlinkCmpKindEnum = { fg = colors.yellow }, -- #f9e2af
-        BlinkCmpKindEnumMember = { fg = colors.peach }, -- #fab387
+        FloatBorder = { fg = colors.text, bg = colors.none },
+        -- HarpoonBorder = { fg = colors.text, bg = colors.base },
 
-        YankyYanked = { fg = colors.base, bg = colors.peach }, -- #1e1e2e #fab387
-        YankyPut = { fg = colors.base, bg = colors.peach }, -- #1e1e2e #fab387
+        BlinkCmpKindStruct = { fg = colors.yellow },
+        BlinkCmpKindEnum = { fg = colors.yellow },
+        BlinkCmpKindEnumMember = { fg = colors.peach },
+
+        YankyYanked = { fg = colors.base, bg = colors.peach },
+        YankyPut = { fg = colors.base, bg = colors.peach },
       }
     end,
 
     default_integrations = true,
     integrations = {
-      aerial = true,
-      alpha = true,
+      -- aerial = true,
+      -- alpha = true,
+      -- cmp = true,
+      -- dap = true,
+      -- dap_ui = true,
+      -- dashboard = true,
+      -- navic = { enabled = true, custom_bg = "lualine" },
+      -- neotest = true,
       blink_cmp = true,
-      cmp = true,
       dadbod_ui = true,
-      dap = true,
-      dap_ui = true,
-      dashboard = true,
       flash = true,
       fzf = true,
       gitsigns = true,
@@ -74,8 +79,6 @@ return {
       harpoon = true,
       markdown = true,
       mason = true,
-      navic = { enabled = true, custom_bg = "lualine" },
-      neotest = true,
       neotree = true,
       noice = true,
       notify = true,
@@ -86,23 +89,23 @@ return {
       snacks = true,
       treesitter = true,
       which_key = true,
-      indent_blankline = {
-        enabled = true,
-        scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
-        colored_indent_levels = false,
-      },
-      illuminate = {
-        enabled = true,
-        lsp = true,
-      },
-      telescope = {
-        enabled = true,
-        -- style = "nvchad",
-      },
-      mini = {
-        enabled = true,
-        indentscope_color = "",
-      },
+      -- indent_blankline = {
+      --   enabled = true,
+      --   scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+      --   colored_indent_levels = false,
+      -- },
+      -- illuminate = {
+      --   enabled = true,
+      --   lsp = true,
+      -- },
+      -- telescope = {
+      --   enabled = true,
+      -- style = "nvchad",
+      -- },
+      -- mini = {
+      --   enabled = true,
+      --   indentscope_color = "",
+      -- },
       -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
   },
