@@ -8,6 +8,7 @@ return {
       sqlite = { glyph = "", hl = "MiniIconsBlue" },
       fish = { glyph = "󰈺", hl = "MiniIconsGreen" },
     },
+
     file = {
       -- ["snippets.lua"] = { glyph = "", hl = "MiniIconsOrange" },
       [".tmux.conf"] = { glyph = "", hl = "MiniIconsGreen" },
