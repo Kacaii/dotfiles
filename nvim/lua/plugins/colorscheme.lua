@@ -36,6 +36,7 @@ return {
     },
     color_overrides = {
       mocha = {
+        sky = "#87d7d7",
         red = "#ff87af",
         pink = "#ffafd7",
         maroon = "#ffafaf",
