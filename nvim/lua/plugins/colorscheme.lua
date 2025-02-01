@@ -59,11 +59,12 @@ return {
         LineNr = { fg = colors.overlay1 },
 
         ["@lsp.type.enumMember.zig"] = { fg = colors.yellow },
-        ["@lsp.type.type.zig"] = { fg = colors.mauve },
+        ["@lsp.type.type.zig"] = { fg = colors.yellow },
         ["@lsp.type.namespace.zig"] = { fg = colors.text, italic = false },
         ["@variable.parameter.zig"] = { fg = colors.text },
         ["@function.builtin.zig"] = { fg = colors.blue },
         ["@lsp.type.property.zig"] = { fg = colors.text },
+        ["@lsp.type.struct.zig"] = { fg = colors.mauve },
 
         Pmenu = { bg = colors.none },
         PmenuSel = { fg = colors.text, bg = colors.surface0 },
