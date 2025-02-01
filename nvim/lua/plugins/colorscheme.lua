@@ -36,12 +36,16 @@ return {
     },
     color_overrides = {
       mocha = {
+        red = "#ff87af",
+        maroon = "#ffafaf",
+        yellow = "#ffd7af",
         blue = "#87afff",
         green = "#afd7af",
-        text = "#d7d7ff",
-        overlay1 = "#5f5f87", -- Comments
+        mauve = "#d7afff",
+        overlay1 = "#5f5f87",
         overlay2 = "#9e9e9e",
-        mauve = "#d7afff", -- keywords
+        peach = "#ffaf87",
+        text = "#d7d7ff",
       },
     },
 
@@ -52,10 +56,14 @@ return {
         LspInlayHint = { fg = colors.overlay1 },
         Comment = { fg = colors.overlay1 },
         Type = { fg = colors.yellow },
+        LineNr = { fg = colors.overlay1 },
 
         ["@lsp.type.enumMember.zig"] = { fg = colors.yellow },
+        ["@lsp.type.type.zig"] = { fg = colors.mauve },
         ["@lsp.type.namespace.zig"] = { fg = colors.text, italic = false },
         ["@variable.parameter.zig"] = { fg = colors.text },
+        ["@function.builtin.zig"] = { fg = colors.blue },
+        ["@lsp.type.property.zig"] = { fg = colors.text },
 
         Pmenu = { bg = colors.none },
         PmenuSel = { fg = colors.text, bg = colors.surface0 },
