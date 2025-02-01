@@ -20,7 +20,6 @@ return {
     file = {
       [".tmux.conf"] = { glyph = "", hl = "MiniIconsGreen" },
       ["README.md"] = { glyph = "󰂺", hl = "MiniIconsWhite" },
-      ["main.zig"] = { glyph = "" },
 
       ["package.json"] = { glyph = "󰏓", hl = "MiniIconsOrange" },
       ["yazi.toml"] = { glyph = "󰇥", hl = "MiniIconsYellow" },

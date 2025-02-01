@@ -34,22 +34,35 @@ return {
       operators = {},
       -- miscs = {}, -- Uncomment to turn off hard-coded styles
     },
-    color_overrides = {},
+    color_overrides = {
+      mocha = {
+        blue = "#87afff",
+        green = "#afd7af",
+        text = "#d7d7ff",
+        overlay1 = "#5f5f87", -- Comments
+        overlay2 = "#9e9e9e",
+        mauve = "#d7afff", -- keywords
+      },
+    },
 
     custom_highlights = function(colors)
       return {
+
         -- Making the comments less distracting
-        Comment = { fg = colors.overlay0 },
+        LspInlayHint = { fg = colors.overlay1 },
+        Comment = { fg = colors.overlay1 },
+        Type = { fg = colors.yellow },
+
+        ["@lsp.type.enumMember.zig"] = { fg = colors.yellow },
+        ["@lsp.type.namespace.zig"] = { fg = colors.text, italic = false },
+        ["@variable.parameter.zig"] = { fg = colors.text },
 
         Pmenu = { bg = colors.none },
         PmenuSel = { fg = colors.text, bg = colors.surface0 },
-        -- PmenuThumb = { bg = colors.text },
 
         -- Making the float window same color as the bg.
         NormalFloat = { fg = colors.text, bg = colors.none },
-
         FloatBorder = { fg = colors.text, bg = colors.none },
-        -- HarpoonBorder = { fg = colors.text, bg = colors.base },
 
         BlinkCmpKindStruct = { fg = colors.yellow },
         BlinkCmpKindEnum = { fg = colors.yellow },
@@ -57,6 +70,9 @@ return {
 
         YankyYanked = { fg = colors.base, bg = colors.peach },
         YankyPut = { fg = colors.base, bg = colors.peach },
+
+        SnacksDashboardHeader = { fg = colors.mauve },
+        SnacksDashboardIcon = { fg = colors.mauve },
       }
     end,
 
