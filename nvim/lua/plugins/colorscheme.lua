@@ -55,7 +55,8 @@ return {
       return {
 
         -- Making the comments less distracting
-        LspInlayHint = { fg = colors.overlay1 },
+        LspInlayHint = { fg = colors.overlay1, bg = "#242438" },
+
         Comment = { fg = colors.overlay1 },
         Type = { fg = colors.yellow },
         LineNr = { fg = colors.overlay1 },
