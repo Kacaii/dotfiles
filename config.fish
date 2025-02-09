@@ -93,8 +93,6 @@ if status is-interactive
         set ensure_installed \
             bat \
             bat-extras \
-            docker \
-            docker-completion \
             fzf \
             gh \
             ghq \
@@ -104,18 +102,22 @@ if status is-interactive
             lazygit \
             lua \
             luarocks \
+            tmux \
             neovim \
             ripgrep \
             sqlite \
             tree \
             tree-sitter \
             yazi \
+            deno \
             zig
 
-        # Making sure that everything is installed
-        for program in $ensure_installed
-            brew install $program
-            # echo $program "installed!"
-        end
+        for formulae in $ensure_installed
+            # brew install $formulae
+            echo $formulae 
+        end # End `for loop`
+
+        fish_update_completions # 
+        echo \n▒▒▒ All done!
     end
 end
