@@ -12,28 +12,29 @@ if status is-interactive
     fzf --fish | source
 
     # Adding stuff to Path 
-    fish_add_path /home/kacaii/.bun/bin
-    fish_add_path /home/kacaii/.cargo/bin
-    fish_add_path /home/kacaii/.local/bin
+    fish_add_path /snap/bin
     fish_add_path /home/kacaii/custom-scripts/
-    fish_add_path /home/kacaii/go/bin/
+    fish_add_path /home/kacaii/.bun/bin
     fish_add_path /home/linuxbrew/.linuxbrew/bin
     fish_add_path /home/linuxbrew/.linuxbrew/sbin
-    fish_add_path /snap/bin
+    fish_add_path /home/kacaii/.cargo/bin
+    fish_add_path /home/kacaii/.local/bin
+    fish_add_path /home/kacaii/go/bin/
 
     # Adding abbreviations
-    abbr cls clear # Clear Screen 
-    abbr fcc fish_clipboard_copy # Copy to clipboard 
-    abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf 󰱼
-    abbr g git # Git commands 󰊢
-    abbr gc "ghq get" # Clone repository 󰊢
-    abbr gg lazygit # Open lazygit GUI 󰊢
-    abbr gp "git pull" # Pull 󰊢
-    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme 
-    abbr tk "tmux kill-server" # Kill tmux server 
+    abbr cls clear # Clear Screen - 
+    abbr v nvim # Open nvim - 
+    # abbr vv "nvim ." # Open current directory in neovim
+    abbr fvv 'nvim $(fzf)' # Open file in neovim using fzf
+    abbr g git # Git commands - 󰊢
+    abbr gg lazygit # Open lazygit GUI - 󰊢
+    abbr gp "git pull" # Pull - 󰊢
+    abbr gc "ghq get" # Clone repository - 󰊢
+    abbr tk "tmux kill-server" # Kill tmux server
+    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme
     abbr tt tmux # Shortcut to tmux 
-    abbr v nvim # Open nvim 
-    abbr vv "nvim ." # Open current directory in neovim 
+    abbr fcc fish_clipboard_copy # Copy to clipboard
+    abbr zbr 'zig build run' # 
 
     # Upgrade Packages and Updates Package Panager
     alias uu='\
@@ -41,6 +42,10 @@ if status is-interactive
       && sudo apt full-upgrade -y \
       && brew upgrade \
       && ya pack -u'
+
+    alias update_dotfiles='\
+  cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/\
+  && cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/'
 
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
@@ -55,12 +60,14 @@ if status is-interactive
       --multi"
 
     function yy # Yazi Q setup 󰇥
+
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"
         if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
             cd -- "$cwd"
         end
         rm -f -- "$tmp"
+
     end
 
     # Prints all files in current directory in pretty bat format
