@@ -93,6 +93,9 @@ if status is-interactive
         set ensure_installed \
             bat \
             bat-extras \
+            curl \
+            deno \
+            fd \
             fzf \
             gh \
             ghq \
@@ -102,14 +105,13 @@ if status is-interactive
             lazygit \
             lua \
             luarocks \
-            tmux \
             neovim \
             ripgrep \
             sqlite \
+            tmux \
             tree \
             tree-sitter \
             yazi \
-            deno \
             zig
 
         for formulae in $ensure_installed
