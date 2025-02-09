@@ -44,8 +44,9 @@ if status is-interactive
       && ya pack -u'
 
     alias update_dotfiles='\
-  cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/\
-  && cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/'
+  cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/ \
+  && cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/ \
+  '
 
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
@@ -79,5 +80,42 @@ if status is-interactive
             end
         end
 
+    end
+
+    # For when you need to setup everything quickly
+    # For that  you'll need:
+    #
+    # - Git            https://git-scm.com/downloads/linux
+    # - Homebrew       https://brew.sh/
+    # - Fish Shell     https://fishshell.com/
+    function basic_custom_setup
+        # Add essential software here
+        set ensure_installed \
+            bat \
+            bat-extras \
+            docker \
+            docker-completion \
+            fzf \
+            gh \
+            ghq \
+            glow \
+            go \
+            httpie \
+            lazygit \
+            lua \
+            luarocks \
+            neovim \
+            ripgrep \
+            sqlite \
+            tree \
+            tree-sitter \
+            yazi \
+            zig
+
+        # Making sure that everything is installed
+        for program in $ensure_installed
+            brew install $program
+            # echo $program "installed!"
+        end
     end
 end
