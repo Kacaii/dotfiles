@@ -15,6 +15,7 @@ return {
       db = { glyph = "", hl = "MiniIconsBlue" },
       sqlite = { glyph = "", hl = "MiniIconsBlue" },
       fish = { glyph = "󰈺", hl = "MiniIconsGreen" },
+      zig = { hl = "MiniIconsYellow" },
     },
 
     file = {
@@ -31,7 +32,7 @@ return {
       -- Lazy
       ["colorscheme.lua"] = { glyph = "", hl = "MiniIconsPurple" },
       ["core.lua"] = { glyph = "", hl = "MiniIconsGreen" },
-      ["disable.lua"] = { glyph = "󱨦", hl = "MiniIconsRed" },
+      ["disable.lua"] = { glyph = "", hl = "MiniIconsRed" },
       ["keymaps.lua"] = { glyph = "󰌌", hl = "MiniIconsOrange" },
       ["lazy.lua"] = { glyph = "󰒲", hl = "MiniIconsPurple" },
       ["options.lua"] = { glyph = "", hl = "MiniIconsOrange" },

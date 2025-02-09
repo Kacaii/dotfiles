@@ -36,55 +36,77 @@ return {
     },
     color_overrides = {
       mocha = {
-        sky = "#87d7d7",
-        red = "#ff87af",
-        pink = "#ffafd7",
-        maroon = "#ffafaf",
-        yellow = "#ffd7af",
         blue = "#87afff",
         green = "#afd7af",
+        maroon = "#ffafaf",
         mauve = "#d7afff",
         overlay1 = "#5f5f87",
         overlay2 = "#9e9e9e",
         peach = "#ffaf87",
+        pink = "#ffafd7",
+        red = "#ff87af",
+        sky = "#87d7d7",
         text = "#d7d7ff",
+        yellow = "#ffd7af",
       },
     },
 
     custom_highlights = function(colors)
       return {
 
-        -- Making the comments less distracting
-        LspInlayHint = { fg = colors.overlay1, bg = "#242438" },
-
+        -- 󱐥 Core --
         Comment = { fg = colors.overlay1 },
         Type = { fg = colors.yellow },
-        LineNr = { fg = colors.overlay1 },
+        LspInlayHint = { fg = colors.overlay1, bg = "#242438" },
+        LineNr = { fg = colors.overlay1 }, -- Line numbers
 
-        ["@lsp.type.enumMember.zig"] = { fg = colors.yellow },
-        ["@lsp.type.type.zig"] = { fg = colors.yellow },
-        ["@lsp.type.namespace.zig"] = { fg = colors.text, italic = false },
-        ["@variable.parameter.zig"] = { fg = colors.text },
-        ["@function.builtin.zig"] = { fg = colors.blue },
-        ["@lsp.type.property.zig"] = { fg = colors.text },
-        ["@lsp.type.struct.zig"] = { fg = colors.mauve },
-
-        Pmenu = { bg = colors.none },
-        PmenuSel = { fg = colors.text, bg = colors.surface0 },
-
-        -- Making the float window same color as the bg.
+        -- Making the float window same color as the bg. --
         NormalFloat = { fg = colors.text, bg = colors.none },
         FloatBorder = { fg = colors.text, bg = colors.none },
 
+        rainbow1 = { fg = colors.mauve }, -- Previously RED
+        rainbow2 = { fg = colors.maroon }, -- Previously PEACH
+
+        --  render_markdown --
+        RenderMarkdownH1Bg = { bg = colors.base },
+        RenderMarkdownH1 = { fg = colors.mauve },
+
+        RenderMarkdownH2Bg = { bg = colors.base },
+        RenderMarkdownH2 = { fg = colors.maroon },
+
+        RenderMarkdownH3Bg = { bg = colors.base },
+        RenderMarkdownH4Bg = { bg = colors.base },
+        RenderMarkdownH5Bg = { bg = colors.base },
+        RenderMarkdownCodeInline = { bg = colors.mantle },
+
+        --  Zig Highlights --
+        ["@function.builtin.zig"] = { fg = colors.blue },
+        ["@lsp.type.enumMember.zig"] = { fg = colors.yellow },
+        ["@lsp.type.namespace.zig"] = { fg = colors.text, italic = false },
+        ["@lsp.type.parameter.zig"] = { fg = colors.red },
+        ["@lsp.type.property.zig"] = { fg = colors.text },
+        ["@lsp.type.struct.zig"] = { fg = colors.maroon },
+        ["@lsp.type.type.zig"] = { fg = colors.yellow },
+        ["@variable.parameter.zig"] = { fg = colors.text },
+
+        -- 󱐀 Completion --
+        Pmenu = { bg = colors.none },
+        PmenuSel = { fg = colors.text, bg = colors.surface0 },
+        BlinkCmpMenuBorder = { fg = colors.text },
+
+        -- 󱐀 BlinkCmp --
         BlinkCmpKindStruct = { fg = colors.yellow },
         BlinkCmpKindEnum = { fg = colors.yellow },
         BlinkCmpKindEnumMember = { fg = colors.peach },
 
+        --  Yanky --
         YankyYanked = { fg = colors.base, bg = colors.peach },
         YankyPut = { fg = colors.base, bg = colors.peach },
 
+        -- 󱥰 Snacks.dashboard --
         SnacksDashboardHeader = { fg = colors.mauve },
         SnacksDashboardIcon = { fg = colors.mauve },
+        SnacksDashboardKey = { fg = colors.mauve },
       }
     end,
 

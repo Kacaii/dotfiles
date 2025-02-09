@@ -24,6 +24,8 @@ return {
         EnumMember = " ",
         Variable = "󰫧 ",
         Text = " ",
+        Method = "󰡱 ",
+        Function = "󰡱 ",
       },
     },
   },
