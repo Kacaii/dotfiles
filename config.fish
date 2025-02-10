@@ -111,7 +111,7 @@ if status is-interactive
 
         for formulae in $ensure_installed
             brew install $formulae
-        end # End `for loop`
+        end
 
         fish_update_completions
         echo \n▒▒▒ All done!
