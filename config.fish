@@ -58,12 +58,6 @@ if status is-interactive
         fisher update
     end
 
-    # Copies nvim configuration
-    function update_dotfiles
-        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
-        cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
-    end
-
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
@@ -74,6 +68,13 @@ if status is-interactive
             cd -- "$cwd"
         end
         rm -f -- "$tmp"
+    end
+
+    # Copies nvim configuration
+    function update_backup_dotfiles
+        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
+        cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
+        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/
     end
 
     # For when you need to setup everything quickly
