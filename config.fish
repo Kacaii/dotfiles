@@ -75,6 +75,7 @@ if status is-interactive
         cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
         cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
         cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/
+        cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
     end
 
     # For when you need to setup everything quickly
