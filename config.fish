@@ -19,6 +19,8 @@ if status is-interactive
     # Colored MAN Config 
     set -g man_bold -o cba7f7
 
+    # VM 1604 OK
+
     # Set up FZF integration 
     fzf --fish | source
 
