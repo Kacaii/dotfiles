@@ -20,6 +20,7 @@ if status is-interactive
     set -g man_bold -o cba7f7
 
     # VM 1604 OK
+    # VM 1402 OK
 
     # Set up FZF integration 
     fzf --fish | source
