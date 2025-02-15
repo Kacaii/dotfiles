@@ -19,9 +19,6 @@ if status is-interactive
     # Colored MAN Config 
     set -g man_bold -o cba7f7
 
-    # VM 1604 OK
-    # VM 1402 OK
-
     # Set up FZF integration 
     fzf --fish | source
 
@@ -75,10 +72,10 @@ if status is-interactive
 
     # Copies nvim configuration
     function update_backup_dotfiles
-        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
         cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/
+        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
         cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
+        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/
     end
 
     # For when you need to setup everything quickly
@@ -88,24 +85,22 @@ if status is-interactive
     # - Homebrew       https://brew.sh/
     # - Fish Shell     https://fishshell.com/
     function basic_custom_setup
-
         # Add essential software here
         set ensure_installed \
             bat \
             bat-extras \
-            curl \
             deno \
             fd \
             fzf \
             gh \
             ghq \
-            glow \
             go \
             httpie \
             lazygit \
             lua \
             luarocks \
             neovim \
+            node \
             ripgrep \
             sqlite \
             tmux \
@@ -113,7 +108,6 @@ if status is-interactive
             tree-sitter \
             yazi \
             zig
-
         for formulae in $ensure_installed
             brew install $formulae
         end
