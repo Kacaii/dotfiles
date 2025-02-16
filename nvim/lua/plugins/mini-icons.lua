@@ -9,6 +9,7 @@ return {
     directory = {
       config = { glyph = "" },
       plugins = { glyph = "󰉓" },
+      ["terminal-escape-codes"] = { glyph = "" },
     },
 
     extension = {
@@ -19,15 +20,20 @@ return {
     },
 
     file = {
-      [".tmux.conf"] = { glyph = "", hl = "MiniIconsGreen" },
+      ["terminal-colors.json"] = { glyph = "", hl = "MiniIconsBlue" },
+      ["terminal-cursor-controls.json"] = { glyph = "", hl = "MiniIconsBlue" },
+      ["terminal-general-ascii.json"] = { glyph = "", hl = "MiniIconsBlue" },
+      ["terminal-modes.json"] = { glyph = "", hl = "MiniIconsBlue" },
+
       ["README.md"] = { glyph = "󰂺", hl = "MiniIconsWhite" },
 
-      ["package.json"] = { glyph = "󰏓", hl = "MiniIconsOrange" },
+      [".tmux.conf"] = { glyph = "", hl = "MiniIconsGreen" },
       ["yazi.toml"] = { glyph = "󰇥", hl = "MiniIconsYellow" },
 
       -- Deno
       ["deno.json"] = { glyph = "", hl = "MiniIconsOrange" },
       ["deno.lock"] = { glyph = "", hl = "MiniIconsBlue" },
+      ["package.json"] = { glyph = "󰏓", hl = "MiniIconsOrange" },
 
       -- Lazy
       ["colorscheme.lua"] = { glyph = "", hl = "MiniIconsPurple" },

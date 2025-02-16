@@ -1,10 +1,15 @@
 if status is-interactive
 
-    set -g fish_greeting "" # Disables fish_greeting 
+    set -g fish_greeting ""
     set -gx TERM xterm-256color
-
     set -gx EDITOR nvim
-    abbr v nvim # 
+
+    set -Ux FZF_DEFAULT_OPTS "\
+      --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+      --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+      --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+      --color=selected-bg:#45475a \
+      --multi"
 
     # Adding stuff to Path 
     fish_add_path /home/kacaii/.bun/bin
@@ -16,24 +21,16 @@ if status is-interactive
     fish_add_path /home/linuxbrew/.linuxbrew/sbin
     fish_add_path /snap/bin
 
-    # Colored MAN Config 
-    set -g man_bold -o cba7f7
-
     # Set up FZF integration 
     fzf --fish | source
+    zoxide init fish | source
 
-    # Set up FZF colors
-    set -Ux FZF_DEFAULT_OPTS "\
-      --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-      --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-      --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-      --color=selected-bg:#45475a \
-      --multi"
+    abbr c clear
+    abbr fcc fish_clipboard_copy
 
-    abbr c clear # Clear Screen 
-    abbr fcc fish_clipboard_copy # Copy to clipboard
-
-    abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme
+    abbr v nvim
+    abbr bat 'prettybat --color=always --theme="Catppuccin Mocha"'
+    abbr man batman
 
     #  Git abreviations
     abbr g git
@@ -49,6 +46,9 @@ if status is-interactive
     abbr tk "tmux kill-server"
     abbr tt tmux
 
+    alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
+    alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
+
     # Upgrade Packages and Updates Package Panager
     function uu
         sudo apt update -y
@@ -57,9 +57,6 @@ if status is-interactive
         ya pack -u
         fisher update
     end
-
-    alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
-    alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
     # Copies nvim configuration
     function update_backup_dotfiles
