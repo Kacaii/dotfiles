@@ -30,7 +30,7 @@ if status is-interactive
       --color=selected-bg:#45475a \
       --multi"
 
-    abbr cls clear # Clear Screen 
+    abbr c clear # Clear Screen 
     abbr fcc fish_clipboard_copy # Copy to clipboard
 
     abbr pbat 'prettybat --color=always --theme="Catppuccin Mocha"' # Pretty Bat using Catppuccin Mocha theme

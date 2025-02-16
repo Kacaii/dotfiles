@@ -15,7 +15,7 @@ return {
       db = { glyph = "", hl = "MiniIconsBlue" },
       sqlite = { glyph = "", hl = "MiniIconsBlue" },
       fish = { glyph = "󰈺", hl = "MiniIconsGreen" },
-      zig = { hl = "MiniIconsYellow" },
+      ["zig.zon"] = { glyph = "" },
     },
 
     file = {
