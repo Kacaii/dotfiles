@@ -61,15 +61,6 @@ if status is-interactive
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
-    function yy # Yazi Q setup 󰇥
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            cd -- "$cwd"
-        end
-        rm -f -- "$tmp"
-    end
-
     # Copies nvim configuration
     function update_backup_dotfiles
         cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
@@ -114,5 +105,14 @@ if status is-interactive
 
         fish_update_completions
         echo \n▒▒▒ All done!
+    end
+
+    function yy # Yazi Q setup 󰇥
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
     end
 end
