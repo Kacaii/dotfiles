@@ -61,47 +61,10 @@ if status is-interactive
     # Copies nvim configuration
     function update_backup_dotfiles
         cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
+        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles
         cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
         cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
         cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/
-    end
-
-    # For when you need to setup everything quickly
-    # For that  you'll need:
-
-    # - Git            https://git-scm.com/downloads/linux
-    # - Homebrew       https://brew.sh/
-    # - Fish Shell     https://fishshell.com/
-    function basic_custom_setup
-        # Add essential software here
-        set ensure_installed \
-            bat \
-            bat-extras \
-            deno \
-            fd \
-            fzf \
-            gh \
-            ghq \
-            go \
-            httpie \
-            lazygit \
-            lua \
-            luarocks \
-            neovim \
-            node \
-            ripgrep \
-            sqlite \
-            tmux \
-            tree \
-            tree-sitter \
-            yazi \
-            zig
-        for formulae in $ensure_installed
-            brew install $formulae
-        end
-
-        fish_update_completions
-        echo \n▒▒▒ All done!
     end
 
     function yy # Yazi Q setup 󰇥
