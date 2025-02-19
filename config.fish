@@ -64,7 +64,7 @@ if status is-interactive
         cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles
         cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
         cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/
+        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux
     end
 
     function yy # Yazi Q setup 󰇥
