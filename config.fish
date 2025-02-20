@@ -96,25 +96,21 @@ if status is-interactive
             brew install $formulae
         end
 
-        fish_update_completions
-        echo \n▒▒▒ All done!
-    end
-
-    # Copies nvim configuration
-    function update_backup_dotfiles
-        cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles
-        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
-        cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux
-    end
-
-    function yy # Yazi Q setup 󰇥
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            cd -- "$cwd"
+        # Copies nvim configuration
+        function update_backup_dotfiles
+            cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
+            cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles
+            cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
+            cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
+            cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux
         end
-        rm -f -- "$tmp"
+
+        function yy # Yazi Q setup 󰇥
+            set tmp (mktemp -t "yazi-cwd.XXXXXX")
+            yazi $argv --cwd-file="$tmp"
+            if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+                cd -- "$cwd"
+            end
+            rm -f -- "$tmp"
+        end
     end
-end
