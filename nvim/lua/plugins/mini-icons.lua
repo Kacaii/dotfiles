@@ -10,9 +10,11 @@ return {
       config = { glyph = "" },
       plugins = { glyph = "󰉓" },
       ["terminal-escape-codes"] = { glyph = "" },
+      code = { glyph = "󰉌" },
     },
 
     extension = {
+      php = { glyph = "" },
       db = { glyph = "", hl = "MiniIconsBlue" },
       sqlite = { glyph = "", hl = "MiniIconsBlue" },
       fish = { glyph = "󰈺", hl = "MiniIconsGreen" },

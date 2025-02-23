@@ -121,6 +121,7 @@ dirs = [
   { name = "ghq", text = "", fg = "#f38ba8" },
   { name = "custom-scripts", text = "󱧶", fg = "#a6e3a1" },
   { name = ".config", text = "", fg = "#fab387" },
+  { name = "code", text = "󰉌" },
 ]
 
 files = [
