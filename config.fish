@@ -21,40 +21,9 @@ if status is-interactive
     fish_add_path /home/linuxbrew/.linuxbrew/sbin
     fish_add_path /snap/bin
 
-
     # Setup shell integrations
     fzf --fish | source
     zoxide init fish | source
-
-    # Setup PHP / Laravel
-    fish_add_path /home/kacaii/.config/herd-lite/bin
-    #
-    # This file is part of the Symfony package.
-    #
-    # (c) Fabien Potencier <fabien@symfony.com>
-    #
-    # For the full copyright and license information, please view
-    # https://symfony.com/doc/current/contributing/code/license.html
-
-    function _sf_laravel
-        set sf_cmd (commandline -o)
-        set c (count (commandline -oc))
-
-        set completecmd "$sf_cmd[1]" _complete --no-interaction -sfish -a1
-
-        for i in $sf_cmd
-            if [ $i != "" ]
-                set completecmd $completecmd "-i$i"
-            end
-        end
-
-        set completecmd $completecmd "-c$c"
-
-        $completecmd
-    end
-
-    complete -c laravel -a '(_sf_laravel)' -f
-
 
     function y
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -89,7 +58,6 @@ if status is-interactive
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
-
     # Upgrade Packages and Updates Package Panager
     function uu
         sudo apt update -y
@@ -99,14 +67,28 @@ if status is-interactive
         fisher update
     end
 
+    # Update backup files
+    function sync_backup_dotfiles
+        cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/ #       Fish
+        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/ #         Nvim
+        cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi #   󰇥 Yazi Theme
+        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux #                 Tmux
+    end
+
+    function sync_current_dotfiles
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/
+
+    end
+
     # For when you need to setup everything quickly
     # For that  you'll need:
 
-    # - Git            https://git-scm.com/downloads/linux
-    # - Homebrew       https://brew.sh/
-    # - Fish Shell     https://fishshell.com/
+    #  Git            https://git-scm.com/downloads/linux
+    #  Homebrew       https://brew.sh/
+    #  Fish Shell     https://fishshell.com/
+
     function basic_custom_setup
-        # Add essential software here
         set ensure_installed \
             bat \
             bat-extras \
@@ -138,13 +120,23 @@ if status is-interactive
         end
     end
 
-    # Copies nvim configuration
-    function update_backup_dotfiles
-        cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles
-        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/
-        cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux
+    # Setup PHP  / Laravel 
+    fish_add_path /home/kacaii/.config/herd-lite/bin
+    function _sf_laravel
+        set sf_cmd (commandline -o)
+        set c (count (commandline -oc))
+        set completecmd "$sf_cmd[1]" _complete --no-interaction -sfish -a1
+
+        for i in $sf_cmd
+            if [ $i != "" ]
+                set completecmd $completecmd "-i$i"
+            end
+        end
+
+        set completecmd $completecmd "-c$c"
+
+        $completecmd
     end
+    complete -c laravel -a '(_sf_laravel)' -f
 
 end
