@@ -76,9 +76,9 @@ if status is-interactive
     end
 
     function sync_current_dotfiles
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/config.fish ~/.config/fish
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/config.fish ~/.config/fish/
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/
 
     end
 
