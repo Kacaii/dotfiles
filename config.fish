@@ -1,17 +1,6 @@
 if status is-interactive
 
-    set -g fish_greeting ""
-    set -gx TERM xterm-256color
-    set -gx EDITOR nvim
-
-    set -Ux FZF_DEFAULT_OPTS "\
-      --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-      --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
-      --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
-      --color=selected-bg:#45475a \
-      --multi"
-
-    # Adding stuff to Path 
+    # Path 󰅨
     fish_add_path /home/kacaii/.bun/bin
     fish_add_path /home/kacaii/.cargo/bin
     fish_add_path /home/kacaii/.local/bin
@@ -21,7 +10,18 @@ if status is-interactive
     fish_add_path /home/linuxbrew/.linuxbrew/sbin
     fish_add_path /snap/bin
 
-    # Setup shell integrations
+    set -g fish_greeting ""
+    set -gx EDITOR nvim
+    set -gx TERM xterm-256color
+
+    set -Ux FZF_DEFAULT_OPTS "\
+      --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+      --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+      --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+      --color=selected-bg:#45475a \
+      --multi"
+
+    # Setup Shell integrations
     fzf --fish | source
     zoxide init fish | source
 
@@ -55,6 +55,7 @@ if status is-interactive
     abbr tk "tmux kill-server"
     abbr tt tmux
 
+    #  Edit config files
     alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
