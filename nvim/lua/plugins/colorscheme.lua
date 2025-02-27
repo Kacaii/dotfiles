@@ -59,6 +59,7 @@ return {
         Type = { fg = colors.yellow },
         LspInlayHint = { fg = colors.overlay1, bg = "#242438" },
         LineNr = { fg = colors.overlay1 }, -- Line numbers
+        Label = { fg = colors.blue },
 
         -- Making the float window same color as the bg. --
         NormalFloat = { fg = colors.text, bg = colors.none },
@@ -78,6 +79,8 @@ return {
         RenderMarkdownH4Bg = { bg = colors.base },
         RenderMarkdownH5Bg = { bg = colors.base },
         RenderMarkdownCodeInline = { bg = colors.mantle },
+
+        ["@markup.quote"] = { fg = colors.pink },
 
         --  Zig Highlights --
         ["@function.builtin.zig"] = { fg = colors.blue },
