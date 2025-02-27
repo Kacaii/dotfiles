@@ -75,7 +75,7 @@ if status is-interactive
         cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux #                 Tmux
     end
 
-    function sync_current_dotfiles
+    function sync_my_current_config
         cp -r $(ghq root)/github.com/Kacaii/dotfiles/config.fish ~/.config/fish/
         cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/
         cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/
