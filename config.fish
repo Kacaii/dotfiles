@@ -75,11 +75,10 @@ if status is-interactive
         cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux #                 Tmux
     end
 
-    function sync_my_current_config
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/config.fish ~/.config/fish/
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/
-
+    function sync_current_dotfiles
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/config.fish ~/.config/fish/ #       Fish
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/ #         Nvim
+        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/ #    Nvim
     end
 
     # For when you need to setup everything quickly
