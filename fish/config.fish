@@ -1,3 +1,4 @@
+# @fish-lsp-disable 4004
 if status is-interactive
 
     # Path 󰅨
@@ -11,10 +12,15 @@ if status is-interactive
     fish_add_path /snap/bin
 
     set -g fish_greeting ""
+
+    # function fish_prompt
+    #     string join "" -- (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal) " " "󰞷 "
+    # end
+
     set -gx EDITOR nvim
     set -gx TERM xterm-256color
 
-    set -Ux FZF_DEFAULT_OPTS "\
+    set -gx FZF_DEFAULT_OPTS "\
       --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
       --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
       --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
@@ -24,15 +30,6 @@ if status is-interactive
     # Setup Shell integrations
     fzf --fish | source
     zoxide init fish | source
-
-    function y
-        set tmp (mktemp -t "yazi-cwd.XXXXXX")
-        yazi $argv --cwd-file="$tmp"
-        if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-            builtin cd -- "$cwd"
-        end
-        rm -f -- "$tmp"
-    end
 
     abbr c clear
     abbr fcc fish_clipboard_copy
@@ -56,8 +53,8 @@ if status is-interactive
     abbr tt tmux
 
     #  Edit config files
-    alias fcg='nvim ~/.config/fish/config.fish' # Open config.fish in neovim
-    alias tcg='nvim ~/.tmux.conf' # Open tmux.conf in neovim
+    abbr fcg 'nvim ~/.config/fish/config.fish' # Open config.fish in neovim
+    abbr tcg 'nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
     # Upgrade Packages and Updates Package Panager
     function uu
@@ -66,20 +63,6 @@ if status is-interactive
         brew upgrade
         ya pack -u
         fisher update
-    end
-
-    function sync_backup_dotfiles -d "Backup your current config files 󰕒 "
-        cp -r ~/.config/fish/config.fish $(ghq root)/github.com/Kacaii/dotfiles/ #       Fish
-        cp -r ~/.config/nvim/lua/ $(ghq root)/github.com/Kacaii/dotfiles/nvim/ #         Nvim
-        cp -r ~/.config/yazi/theme.toml $(ghq root)/github.com/Kacaii/dotfiles/yazi #   󰇥 Yazi Theme
-        cp -r ~/.tmux.conf $(ghq root)/github.com/Kacaii/dotfiles/tmux #                 Tmux
-    end
-
-    function sync_current_dotfiles -d "Update your current config files 󰇚 "
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/config.fish ~/.config/fish/ #       Fish
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/ #         Nvim
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/ #    Nvim
-        cp -r $(ghq root)/github.com/Kacaii/dotfiles/yazi/theme.toml ~/.config/yazi/ #   󰇥 Yazi Theme
     end
 
     # For when you need to setup everything quickly
