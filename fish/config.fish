@@ -21,7 +21,7 @@ if status is-interactive
     # @fish-lsp-disable-next-line 4004
     function fish_prompt
         set -l icon_section ""
-        set -l pwd_section (echo (string join "" (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal)))
+        set -l pwd_section (echo (string join "" (set_color cyan) (prompt_pwd --full-length-dirs 2) (set_color normal)))
 
         if test -e ./deno.json
             set icon_section (echo (string join "" (set_color green) " " (set_color normal)))
