@@ -13,14 +13,26 @@ if status is-interactive
 
     set -g fish_greeting ""
 
+    # @fish-lsp-disable-next-line 4004
     function fish_prompt
-        set -l git_prompt (string join "" (set_color red) (fish_git_prompt) "  " (set_color normal) )
+        set -l icon_gliph ""
 
-        echo -n -s " " (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal) "" $git_prompt ": "
+        if test -e ./deno.json
+            set icon_gliph " "
+        else if test -e ./package.json
+            set icon_gliph " 󰎙"
+        else if test (pwd) = $__fish_config_dir
+            set icon_gliph (echo (string join "" (set_color green) " " (set_color normal)))
+        end
+
+        echo -n -s " " (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal) $icon_gliph "  "
     end
 
+    # @fish-lsp-disable-next-line 4004
     function fish_right_prompt
-        echo -n -s " " (date '+%H:%M') " "
+        set -l git_prompt (echo (string join "" (set_color red) (fish_git_prompt) "  " (set_color normal)))
+
+        echo -n -s $git_prompt (date '+%H:%M') " "
     end
 
     set -gx EDITOR nvim
