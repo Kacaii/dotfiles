@@ -13,9 +13,15 @@ if status is-interactive
 
     set -g fish_greeting ""
 
-    # function fish_prompt
-    #     string join "" -- (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal) " " "󰞷 "
-    # end
+    function fish_prompt
+        set -l git_prompt (string join "" (set_color red) (fish_git_prompt) "  " (set_color normal) )
+
+        echo -n -s " " (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal) "" $git_prompt ": "
+    end
+
+    function fish_right_prompt
+        echo -n -s " " (date '+%H:%M') " "
+    end
 
     set -gx EDITOR nvim
     set -gx TERM xterm-256color
