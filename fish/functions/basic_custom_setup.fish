@@ -2,9 +2,9 @@
 # For that  you'll need:
 
 #  Git            https://git-scm.com/downloads/linux
-#  Homebrew       https://brew.sh/
-#  Fish Shell     https://fishshell.com/
-
+#  Homebrew       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#  Fish Shell     $ brew install fish
+#  GHQ             $ brew install ghq
 function basic_custom_setup
     set ensure_installed \
         bat \
@@ -33,6 +33,11 @@ function basic_custom_setup
         yazi \
         zig
     for formulae in $ensure_installed
-        brew install $formulae
+        if not which -s $formulae
+            brew install -q $formulae
+        end
     end
+
+    # sync_current_dotfiles
+    fish_update_completions
 end
