@@ -1,5 +1,5 @@
 function fish_prompt --description "Customize your prompt "
-    set -l pwd_section ( echo  ( string join "" (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color blue) ) )
+    set -l pwd_section ( echo  ( string join "" (set_color blue) (prompt_pwd --full-length-dirs 2) (set_color normal) ) )
     set -l git_section (fish_git_prompt)
 
     set -l icon_section ""
