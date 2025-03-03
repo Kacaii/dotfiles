@@ -11,14 +11,15 @@ if status is-interactive
     fish_add_path /home/linuxbrew/.linuxbrew/sbin
     fish_add_path /snap/bin
 
+    # Disabling Greeting
     set -g fish_greeting ""
 
+    # Git Prompt Customization
     set -g __fish_git_prompt_showdirtystate true
     set -g __fish_git_prompt_color red
     set -g __fish_git_prompt_color_dirtystate yellow
     set -g __fish_git_prompt_char_dirtystate 
 
-    # @fish-lsp-disable-next-line 4004
     function fish_prompt
         set -l icon_section ""
         set -l pwd_section (echo (string join "" (set_color cyan) (prompt_pwd --full-length-dirs 2) (set_color normal)))
@@ -38,9 +39,7 @@ if status is-interactive
     end
 
     function fish_right_prompt
-        set -l git_section ""
-
-        set git_section (echo (string join "" (fish_git_prompt) (set_color red) "  " (set_color normal)))
+        set -l git_section (echo (string join "" (fish_git_prompt) (set_color red) "  " (set_color normal)))
 
         echo -n -s $git_section (date '+%H:%M') " "
     end
@@ -86,6 +85,7 @@ if status is-interactive
 
     # Setup PHP  / Laravel 
     fish_add_path /home/kacaii/.config/herd-lite/bin
+    # @fish-lsp-disable-next-line 4004
     function _sf_laravel
         set sf_cmd (commandline -o)
         set c (count (commandline -oc))
