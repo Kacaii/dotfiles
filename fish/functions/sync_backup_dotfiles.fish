@@ -8,4 +8,5 @@ function sync_backup_dotfiles -d "Backup your current config files 󰕒 "
     cp -r ~/.config/fish/functions/sync_current_dotfiles.fish $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/
     cp -r ~/.config/fish/functions/uu.fish $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/
     cp -r ~/.config/fish/functions/basic_custom_setup.fish $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/
+    cp -r ~/.config/fish/functions/fish_right_prompt.fish $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/
 end

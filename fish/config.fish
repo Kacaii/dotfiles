@@ -1,7 +1,7 @@
 # @fish-lsp-disable 4004
 if status is-interactive
 
-    set ensure_fish_add_path \
+    set -l ensure_fish_add_path \
         /home/kacaii/.bun/bin \
         /home/kacaii/.cargo/bin \
         /home/kacaii/.local/bin \
@@ -11,8 +11,8 @@ if status is-interactive
         /home/linuxbrew/.linuxbrew/sbin \
         /snap/bin
 
-    for path in $ensure_fish_add_path
-        fish_add_path $path
+    for required_path in $ensure_fish_add_path
+        fish_add_path $required_path
     end
 
     # Path 󰅨
@@ -26,30 +26,6 @@ if status is-interactive
     set -g __fish_git_prompt_color red
     set -g __fish_git_prompt_color_dirtystate yellow
     set -g __fish_git_prompt_char_dirtystate 
-
-    function fish_prompt
-        set -l icon_section ""
-        set -l pwd_section (echo (string join "" (set_color cyan) (prompt_pwd --full-length-dirs 2) (set_color normal)))
-
-        if test -e ./deno.json
-            set icon_section (echo (string join "" (set_color green) " " (set_color normal)))
-
-        else if test -e ./package.json -a (pwd) != $HOME
-            set icon_section (echo (string join "" (set_color green) " " (set_color normal)))
-
-        else if test (pwd) = $__fish_config_dir
-            set icon_section (echo (string join "" (set_color green) " " (set_color normal)))
-
-        end
-
-        echo -n -s " " $pwd_section $icon_section "  "
-    end
-
-    function fish_right_prompt
-        set -l git_section (echo (string join "" (fish_git_prompt) (set_color red) "  " (set_color normal)))
-
-        echo -n -s $git_section (date '+%H:%M') " "
-    end
 
     set -gx EDITOR nvim
     set -gx TERM xterm-256color
