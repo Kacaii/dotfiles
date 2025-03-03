@@ -15,8 +15,6 @@ if status is-interactive
         fish_add_path $required_path
     end
 
-    # Path 󰅨
-
     # Disabling Greeting
     set -g fish_greeting ""
     bind ctrl-e 'nvim ~/.config/fish/config.fish'
@@ -41,14 +39,14 @@ if status is-interactive
     fzf --fish | source
     zoxide init fish | source
 
+    # Regular Abbreviations
+    abbr bat 'prettybat --color=always --theme="Catppuccin Mocha"'
     abbr c clear
     abbr fcc fish_clipboard_copy
-
-    abbr v nvim
-    abbr bat 'prettybat --color=always --theme="Catppuccin Mocha"'
     abbr man batman
+    abbr v nvim
 
-    #  Git abreviations
+    #  Git Abreviations
     abbr g git
     abbr gc "ghq get"
     abbr gg lazygit
@@ -58,7 +56,7 @@ if status is-interactive
     abbr zbr 'zig build run'
     abbr zbt 'zig build test'
 
-    #  Tmux abbreviations
+    #  Tmux Abbreviations
     abbr tk "tmux kill-server"
     abbr tt tmux
 
