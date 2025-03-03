@@ -15,11 +15,19 @@ if status is-interactive
         fish_add_path $required_path
     end
 
-    # Disabling Greeting
+    # Disabling Fish Greeting
     set -g fish_greeting ""
-    bind ctrl-e 'nvim ~/.config/fish/config.fish'
 
-    # Git Prompt Customization
+    #  Edit Fish Config Files 
+    bind ctrl-u "\
+      nvim \
+        ~/.config/fish/config.fish \
+        ~/.config/fish/functions/fish_prompt.fish \
+        ~/.config/fish/functions/fish_right_prompt.fish \
+        ~/.config/fish/functions/sync_backup_dotfiles.fish \
+        ~/.config/fish/functions/sync_current_dotfiles.fish"
+
+    #  Git Prompt Customization
     set -g __fish_git_prompt_showdirtystate true
     set -g __fish_git_prompt_color red
     set -g __fish_git_prompt_color_dirtystate yellow
@@ -58,7 +66,7 @@ if status is-interactive
 
     #  Tmux Abbreviations
     abbr tk "tmux kill-server"
-    abbr tt tmux
+    abbr tm tmux
 
     #  Edit config files
     abbr fcg 'nvim ~/.config/fish/config.fish' # Open config.fish in neovim
