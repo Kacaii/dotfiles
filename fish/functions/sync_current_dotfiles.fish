@@ -1,13 +1,15 @@
 function sync_current_dotfiles -d "Update your current config files 󰇚 "
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/config.fish ~/.config/fish/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/lua/ ~/.config/nvim/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/nvim/snippets/ ~/.config/nvim/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/yazi/theme.toml ~/.config/yazi/
+    set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles/
 
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/sync_backup_dotfiles.fish ~/.config/fish/functions/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/sync_current_dotfiles.fish ~/.config/fish/functions/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/uu.fish ~/.config/fish/functions/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/basic_custom_setup.fish ~/.config/fish/functions/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/fish_prompt.fish ~/.config/fish/functions/
-    cp -r $(ghq root)/github.com/Kacaii/dotfiles/fish/functions/fish_right_prompt.fish ~/.config/fish/functions/
+    cp -r $ghq_dotfiles_root/fish/config.fish $__fish_config_dir/
+    cp -r $ghq_dotfiles_root/nvim/lua/ ~/.config/nvim/
+    cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim/
+    cp -r $ghq_dotfiles_root/yazi/theme.toml ~/.config/yazi/
+
+    cp -r $ghq_dotfiles_root/fish/functions/sync_backup_dotfiles.fish $__fish_config_dir/functions/
+    cp -r $ghq_dotfiles_root/fish/functions/sync_current_dotfiles.fish $__fish_config_dir/functions/
+    cp -r $ghq_dotfiles_root/fish/functions/uu.fish $__fish_config_dir/functions/
+    cp -r $ghq_dotfiles_root/fish/functions/basic_custom_setup.fish $__fish_config_dir/functions/
+    cp -r $ghq_dotfiles_root/fish/functions/fish_prompt.fish $__fish_config_dir/functions/
+    cp -r $ghq_dotfiles_root/fish/functions/fish_right_prompt.fish $__fish_config_dir/functions/
 end

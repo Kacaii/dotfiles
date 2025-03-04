@@ -72,24 +72,4 @@ if status is-interactive
     abbr fcg 'nvim ~/.config/fish/config.fish' # Open config.fish in neovim
     abbr tcg 'nvim ~/.tmux.conf' # Open tmux.conf in neovim
 
-    # Setup PHP  / Laravel 
-    fish_add_path /home/kacaii/.config/herd-lite/bin
-    # @fish-lsp-disable-next-line 4004
-    function _sf_laravel
-        set sf_cmd (commandline -o)
-        set c (count (commandline -oc))
-        set completecmd "$sf_cmd[1]" _complete --no-interaction -sfish -a1
-
-        for i in $sf_cmd
-            if [ $i != "" ]
-                set completecmd $completecmd "-i$i"
-            end
-        end
-
-        set completecmd $completecmd "-c$c"
-
-        $completecmd
-    end
-    complete -c laravel -a '(_sf_laravel)' -f
-
 end
