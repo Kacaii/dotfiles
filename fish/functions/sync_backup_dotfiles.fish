@@ -1,4 +1,12 @@
 function sync_backup_dotfiles -d "Backup your current config files 󰕒 "
+    argparse h/help d/dir -- $argv or return
+
+    # Handle displaying help message
+    if set -q _flag_help
+        echo TODO: help message 
+        return 0
+    end
+
     set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles/
 
     cp -r $__fish_config_dir/config.fish $ghq_dotfiles_root/fish/
@@ -16,22 +24,19 @@ function sync_backup_dotfiles -d "Backup your current config files 󰕒 "
         fish_right_prompt.fish
 
     for fn in $custom_fish_functions
-        cp -r $__fish_config_dir/functions/$fn $ghq_dotfiles_root/fish/functions/
+        cp -r $__fish_config_dir/functions/$fn $ghq_dotfiles_root/fish/functions
     end
 
-    argparse h/help d/dir -- $argv or return
+    # Custom Fish Function Completions
+    set -l custom_fish_functions_completions \
+        sync_backup_dotfiles.fish \
+        sync_current_dotfiles.fish
 
-    # Handle displaying help message
-    complete -c sync_backup_dotfiles -f --short-option h -d "Display Help "
-    complete -c sync_backup_dotfiles -f --long-option help -d "Display Help "
-    if set -q _flag_help
-        echo TODO: help message 
-        return 0
+    for completion in $custom_fish_functions_completions
+        cp -r $__fish_config_dir/completions/$completion $ghq_dotfiles_root/fish/completions
     end
 
     # Handle d/dir flag
-    complete -c sync_backup_dotfiles -f --short-option d -d "Sync dotfiles and change directory"
-    complete -c sync_backup_dotfiles -f --long-option dir -d "Sync dotfiles and change directory"
     if set -q _flag_dir
         cd $ghq_dotfiles_root
     end
