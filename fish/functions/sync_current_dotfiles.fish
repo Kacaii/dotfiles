@@ -6,6 +6,7 @@ function sync_current_dotfiles -d "Update your current config files 󰇚 "
     cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim/
     cp -r $ghq_dotfiles_root/yazi/theme.toml ~/.config/yazi/
 
+    # Custom Fish Functions
     set -l custom_fish_functions \
         sync_backup_dotfiles.fish \
         sync_current_dotfiles.fish \
