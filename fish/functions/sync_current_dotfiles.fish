@@ -1,4 +1,4 @@
-function sync_current_dotfiles -d "Update your current config files 󰇚 "
+function sync_current_dotfiles
     set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles/
 
     cp -r $ghq_dotfiles_root/fish/config.fish $__fish_config_dir/
