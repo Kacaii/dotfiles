@@ -1,4 +1,4 @@
-function sync_backup_dotfiles
+function sync_backup_dotfiles -d 'Backup your current config files 󰕒 '
     argparse h/help d/dir -- $argv or return
 
     # Handle displaying help message
