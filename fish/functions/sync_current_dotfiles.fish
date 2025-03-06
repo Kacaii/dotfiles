@@ -22,8 +22,6 @@ function sync_current_dotfiles -d 'Update your current config files 󰇚 '
     argparse h/help -- $argv or return
 
     # Handle displaying help message
-    complete -c sync_backup_dotfiles -f --short-option h -d "Display Help "
-    complete -c sync_backup_dotfiles -f --long-option help -d "Display Help "
     if set -q _flag_help
         echo TODO: help message 
         return 0
