@@ -20,7 +20,6 @@ if status is-interactive
 
     #  Edit Fish Config Files 
     bind ctrl-u "\
-      cd $__fish_config_dir; \
       nvim \
         ~/.config/fish/config.fish \
         ~/.config/fish/functions/fish_prompt.fish \
