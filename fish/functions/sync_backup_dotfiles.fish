@@ -11,6 +11,7 @@ function sync_backup_dotfiles -d 'Backup your current config files 󰕒 '
 
     cp -r $__fish_config_dir/config.fish $ghq_dotfiles_root/fish/
     cp -r ~/.config/nvim/lua/ $ghq_dotfiles_root/nvim/
+    cp -r ~/.config/nvim/snippets/ $ghq_dotfiles_root/nvim/
     cp -r ~/.config/yazi/theme.toml $ghq_dotfiles_root/yazi
     cp -r ~/.tmux.conf $ghq_dotfiles_root/tmux
 

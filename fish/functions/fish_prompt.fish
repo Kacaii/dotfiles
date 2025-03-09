@@ -25,4 +25,5 @@ function fish_prompt --description "Customize your prompt "
     end
 
     echo -n -s " " $pwd_section $icon_section $git_section \n "  "
+    # zig_custom_prompt
 end

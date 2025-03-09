@@ -19,7 +19,7 @@
         "path": "./terminal-escape-codes/terminal-modes.json"
       },
       {
-        "language": "",
+        "language": "all",
         "path": "./terminal-escape-codes/terminal-colors.json"
       },
       {
@@ -45,6 +45,10 @@
       {
         "language": "go",
         "path": "./languages/go.json"
+      },
+      {
+        "language": "zig",
+        "path": "./languages/zig.json"
       }
     ]
   }
