@@ -62,7 +62,7 @@ if status is-interactive
 
     #  Zig Abbreviations
     abbr zbr 'zig build run'
-    abbr zbt 'zig build test'
+    abbr zbt 'zig build test --summary all'
 
     #  Tmux Abbreviations
     abbr tk "tmux kill-server"

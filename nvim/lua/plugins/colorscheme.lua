@@ -83,12 +83,12 @@ return {
         ["@markup.quote"] = { fg = colors.pink },
 
         --  Zig Highlights --
-        ["@function.builtin.zig"] = { fg = colors.blue },
-        ["@lsp.type.enumMember.zig"] = { fg = colors.yellow },
+        ["@function.builtin.zig"] = { fg = colors.peach },
+        ["@lsp.type.enumMember.zig"] = { fg = colors.maroon },
         ["@lsp.type.namespace.zig"] = { fg = colors.text, italic = false },
         ["@lsp.type.parameter.zig"] = { fg = colors.red },
         ["@lsp.type.property.zig"] = { fg = colors.text },
-        ["@lsp.type.struct.zig"] = { fg = colors.maroon },
+        ["@lsp.type.struct.zig"] = { fg = colors.yellow },
         ["@lsp.type.type.zig"] = { fg = colors.yellow },
         ["@variable.parameter.zig"] = { fg = colors.text },
 
