@@ -15,7 +15,7 @@
         "path": "./utils/blocks.json"
       },
       {
-        "language": "",
+        "language": "./terminal-escape-codes/terminal-modes.json",
         "path": "./terminal-escape-codes/terminal-modes.json"
       },
       {

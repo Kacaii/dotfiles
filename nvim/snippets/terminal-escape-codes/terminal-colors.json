@@ -1,102 +1,102 @@
 {
   "BLACK": {
-    "prefix": "ANSI_COLORS_BLACK",
+    "prefix": "ansi_colors_black",
     "description": "Black Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|30,40|}m\""]
   },
 
   "BRIGHT_BLACK": {
-    "prefix": "ANSI_COLORS_BRIGHT_BLACK",
+    "prefix": "ansi_colors_bright_black",
     "description": "Bright Black Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|90,100|}m\""]
   },
 
   "RED": {
-    "prefix": "ANSI_COLORS_RED",
+    "prefix": "ansi_colors_red",
     "description": "Red Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|31,41|}m\""]
   },
 
   "BRIGHT_RED": {
-    "prefix": "ANSI_COLORS_BRIGHT_RED",
+    "prefix": "ansi_colors_bright_red",
     "description": "Bright Red Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|91,101|}m\""]
   },
 
   "GREEN": {
-    "prefix": "ANSI_COLORS_GREEN",
+    "prefix": "ansi_colors_green",
     "description": "Green Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|32,42|}m\""]
   },
 
   "BRIGHT_GREEN": {
-    "prefix": "ANSI_COLORS_BRIGHT_GREEN",
+    "prefix": "ansi_colors_bright_green",
     "description": "Bright Green Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|92,102|}m\""]
   },
 
   "YELLOW": {
-    "prefix": "ANSI_COLORS_YELLOW",
+    "prefix": "ansi_colors_yellow",
     "description": "Yellow Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|33,43|}m\""]
   },
 
   "BRIGHT_YELLOW": {
-    "prefix": "ANSI_COLORS_BRIGHT_YELLOW",
+    "prefix": "ansi_colors_bright_yellow",
     "description": "Bright Yellow Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|93,103|}m\""]
   },
 
   "BLUE": {
-    "prefix": "ANSI_COLORS_BLUE",
+    "prefix": "ansi_colors_blue",
     "description": "Blue Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|34,44|}m\""]
   },
 
   "BRIGHT_BLUE": {
-    "prefix": "ANSI_COLORS_BRIGHT_BLUE",
+    "prefix": "ansi_colors_bright_blue",
     "description": "Bright Blue Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|94,104|}m\""]
   },
 
   "MAGENTA": {
-    "prefix": "ANSI_COLORS_MAGENTA",
+    "prefix": "ansi_colors_magenta",
     "description": "Magenta Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|35,45|}m\""]
   },
 
   "BRIGHT_MAGENTA": {
-    "prefix": "ANSI_COLORS_BRIGHT_MAGENTA",
+    "prefix": "ansi_colors_bright_magenta",
     "description": "Bright Magenta Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|95,105|}m\""]
   },
 
   "CYAN": {
-    "prefix": "ANSI_COLORS_CYAN",
+    "prefix": "ansi_colors_cyan",
     "description": "Cyan Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|36,46|}m\""]
   },
 
   "BRIGHT_CYAN": {
-    "prefix": "ANSI_COLORS_BRIGHT_CYAN",
+    "prefix": "ansi_colors_bright_cyan",
     "description": "Bright Cyan Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|96,106|}m\""]
   },
 
   "WHITE": {
-    "prefix": "ANSI_COLORS_WHITE",
+    "prefix": "ansi_colors_white",
     "description": "White Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|37,47|}m\""]
   },
 
   "BRIGHT_WHITE": {
-    "prefix": "ANSI_COLORS_BRIGHT_WHITE",
+    "prefix": "ansi_colors_bright_white",
     "description": "Bright White Foreground | Background 󰉦 ",
     "body": ["\"\\x1b[${1|97,107|}m\""]
   },
 
   "DEFAULT": {
-    "prefix": "ANSI_COLORS_DEFAULT",
+    "prefix": "ansi_colors_default",
     "description": "Default Foreground | Background 󰹊 ",
     "body": ["\"\\x1b[${1|39,49|}m\""]
   }

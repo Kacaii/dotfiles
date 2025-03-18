@@ -1,72 +1,72 @@
 {
   "RESET": {
-    "prefix": "ANSI_MODES_RESET",
+    "prefix": "ansi_modes_reset",
     "description": "Reset all colors and modes 󰜉 ",
     "body": ["\"\\x1b[0m\""]
   },
 
   "BOLD": {
-    "prefix": "ANSI_MODES_BOLD",
+    "prefix": "ansi_modes_bold",
     "description": "Set or Remove Bold mode  ",
     "body": ["\"\\x1b[${1|1,22|}m\""]
   },
 
   "DIM": {
-    "prefix": "ANSI_MODES_DIM",
+    "prefix": "ansi_modes_dim",
     "description": "Set or Remove Dim / Faint mode  ",
     "body": ["\"\\x1b[${1|2,22|}m\""]
   },
 
   "FAINT": {
-    "prefix": "ANSI_MODES_FAINT",
+    "prefix": "ansi_modes_faint",
     "description": "Set or Remove Dim / Faint mode  ",
     "body": ["\"\\x1b[${1|2,22|}m\""]
   },
 
   "ITALIC": {
-    "prefix": "ANSI_MODES_ITALIC",
+    "prefix": "ansi_modes_italic",
     "description": "Set or Remove Italic mode  ",
     "body": ["\"\\x1b[${1|3,23|}m\""]
   },
 
   "UNDERLINE": {
-    "prefix": "ANSI_MODES_UNDERLINE",
+    "prefix": "ansi_modes_underline",
     "description": "Set or Remove Underline mode  ",
     "body": ["\"\\x1b[${1|4,24|}m\""]
   },
 
   "BLINKING": {
-    "prefix": "ANSI_MODES_BLINKING",
+    "prefix": "ansi_modes_blinking",
     "description": "Set or Remove Blinking mode  ",
     "body": ["\"\\x1b[${1|5,25|}m\""]
   },
 
   "INVERSE": {
-    "prefix": "ANSI_MODES_INVERSE",
+    "prefix": "ansi_modes_inverse",
     "description": "Set or Remove Inverse / Reverse mode  ",
     "body": ["\"\\x1b[${1|7,27|}m\""]
   },
 
   "REVERSE": {
-    "prefix": "ANSI_MODES_REVERSE",
+    "prefix": "ansi_modes_reverse",
     "description": "Set or Remove Inverse / Reverse mode  ",
     "body": ["\"\\x1b[${1|7,27|}m\""]
   },
 
   "HIDDEN": {
-    "prefix": "ANSI_MODES_HIDDEN",
+    "prefix": "ansi_modes_hidden",
     "description": "Set or Remove Hidden / Invisible mode  ",
     "body": ["\"\\x1b[${1|8,28|}m\""]
   },
 
   "INVISIBLE": {
-    "prefix": "ANSI_MODES_INVISIBLE",
+    "prefix": "ansi_modes_invisible",
     "description": "Set or Remove Hidden / Invisible mode  ",
     "body": ["\"\\x1b[${1|8,28|}m\""]
   },
 
   "STRIKETHROUGH": {
-    "prefix": "ANSI_MODES_STRIKETHROUGH",
+    "prefix": "ansi_modes_strikethrough",
     "description": "Set or Remove strikethrough mode  ",
     "body": ["\"\\x1b[${1|9,29|}m\""]
   }
