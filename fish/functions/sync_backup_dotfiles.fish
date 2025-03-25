@@ -7,13 +7,14 @@ function sync_backup_dotfiles -d 'Backup your current config files 󰕒 '
         return 0
     end
 
-    set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles/
+    set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles
 
-    cp -r $__fish_config_dir/config.fish $ghq_dotfiles_root/fish/
-    cp -r ~/.config/nvim/lua/ $ghq_dotfiles_root/nvim/
-    cp -r ~/.config/nvim/snippets/ $ghq_dotfiles_root/nvim/
+    cp -r $__fish_config_dir/config.fish $ghq_dotfiles_root/fish
+    cp -r ~/.config/nvim/lua/ $ghq_dotfiles_root/nvim
+    cp -r ~/.config/nvim/snippets/ $ghq_dotfiles_root/nvim
     cp -r ~/.config/yazi/theme.toml $ghq_dotfiles_root/yazi
     cp -r ~/.tmux.conf $ghq_dotfiles_root/tmux
+    cp -r ~/.config/lazygit/config.yml $ghq_dotfiles_root/lazygit
 
     # Custom Fish Functions
     set -l custom_fish_functions \

@@ -1,4 +1,12 @@
 function sync_current_dotfiles -d 'Update your current config files 󰇚 '
+    argparse h/help -- $argv or return
+
+    # Handle displaying help message
+    if set -q _flag_help
+        echo TODO: help message 
+        return 0
+    end
+
     set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles/
 
     cp -r $ghq_dotfiles_root/fish/config.fish $__fish_config_dir/
@@ -6,6 +14,7 @@ function sync_current_dotfiles -d 'Update your current config files 󰇚 '
     cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim/
     cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim/
     cp -r $ghq_dotfiles_root/yazi/theme.toml ~/.config/yazi/
+    cp -r $ghq_dotfiles_root/lazygit/config.yml ~/.config/lazygit/
 
     # Custom Fish Functions
     set -l custom_fish_functions \
@@ -18,14 +27,6 @@ function sync_current_dotfiles -d 'Update your current config files 󰇚 '
 
     for fn in $custom_fish_functions
         cp -r $ghq_dotfiles_root/fish/functions/$fn $__fish_config_dir/functions/
-    end
-
-    argparse h/help -- $argv or return
-
-    # Handle displaying help message
-    if set -q _flag_help
-        echo TODO: help message 
-        return 0
     end
 
 end
