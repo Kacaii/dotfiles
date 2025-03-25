@@ -89,8 +89,7 @@ return {
         ["@lsp.type.parameter.zig"] = { fg = colors.red },
         ["@lsp.type.property.zig"] = { fg = colors.text },
         ["@lsp.type.struct.zig"] = { fg = colors.yellow },
-        ["@lsp.type.type.zig"] = { fg = colors.yellow },
-        ["@variable.parameter.zig"] = { fg = colors.text },
+        ["@variable.parameter.zig"] = { fg = colors.yellow },
 
         -- 󱐀 Completion --
         Pmenu = { bg = colors.none },
