@@ -11,14 +11,14 @@ return {
 ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 
-┌────────────┬──────────────┬────────────┬──────────────┬───────────┐
-│ SEG        │ TER          │ QUA        │ QUIN         │ SEX       │
-├────────────┼──────────────┼────────────┼──────────────┼───────────┤
-│ Legislacao │ RPD          │ Eng. Req   │ PTS          │ Coding II │
-│ Legislacao │ RPD          │ Eng. Req   │ PTS          │ Coding II │
-│ Banco II   │ Tech English │ Legislacao │ Criatividade │ Coding II │
-│ Banco II   │ Tech English │ Legislacao │ Criatividade │ Coding II │
-└────────────┴──────────────┴────────────┴──────────────┴───────────┘]],
+┌──────────────┬───────────────────────┬─────────────┬────────────────┬───────────────┐
+│ SEG          │ TER                   │ QUA         │ QUIN           │ SEX           │
+├──────────────┼───────────────────────┼─────────────┼────────────────┼───────────────┤
+│  Legislação │  Tech English        │  Coding II │ 󰏢 PTS          │  Eng Req     │
+│  Legislação │  Tech English        │  Coding II │ 󰏢 PTS          │  Eng Req     │
+│  Banco II   │  Unidade de Extensão │  Coding II │ 󰧑 Criatividade │  Eng Req     │
+│  Banco II   │  Unidade de Extensão │  Banco II  │ 󰧑 Criatividade │ 󰘊 Legislação  │
+└──────────────┴───────────────────────┴─────────────┴────────────────┴───────────────┘]],
       },
     },
   },

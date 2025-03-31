@@ -7,10 +7,10 @@ return {
     os = {},
 
     directory = {
+      src = { hl = "MiniIconsOrange" },
       config = { glyph = "" },
       plugins = { glyph = "󰉓" },
       ["terminal-escape-codes"] = { glyph = "" },
-      code = { glyph = "󰉌" },
     },
 
     extension = {
@@ -18,7 +18,8 @@ return {
       db = { glyph = "", hl = "MiniIconsBlue" },
       sqlite = { glyph = "", hl = "MiniIconsBlue" },
       fish = { glyph = "󰈺", hl = "MiniIconsGreen" },
-      ["zig.zon"] = { glyph = "" },
+      zig = { hl = "MiniIconsYellow" },
+      ["zig.zon"] = { glyph = "", hl = "MiniIconsYellow" },
     },
 
     file = {
