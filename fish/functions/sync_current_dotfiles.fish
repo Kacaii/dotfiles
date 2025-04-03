@@ -23,7 +23,8 @@ function sync_current_dotfiles -d 'Update your current config files 󰇚 '
         uu.fish \
         basic_custom_setup.fish \
         fish_prompt.fish \
-        fish_right_prompt.fish
+        fish_right_prompt.fish \
+        y.fish
 
     for fn in $custom_fish_functions
         cp -r $ghq_dotfiles_root/fish/functions/$fn $__fish_config_dir/functions/

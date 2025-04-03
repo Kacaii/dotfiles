@@ -23,7 +23,8 @@ function sync_backup_dotfiles -d 'Backup your current config files 󰕒 '
         uu.fish \
         basic_custom_setup.fish \
         fish_prompt.fish \
-        fish_right_prompt.fish
+        fish_right_prompt.fish \
+        y.fish
 
     for fn in $custom_fish_functions
         cp -r $__fish_config_dir/functions/$fn $ghq_dotfiles_root/fish/functions

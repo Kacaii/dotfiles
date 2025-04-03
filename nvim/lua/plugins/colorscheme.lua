@@ -81,6 +81,7 @@ return {
         RenderMarkdownCodeInline = { bg = colors.mantle },
 
         ["@markup.quote"] = { fg = colors.pink },
+        ["@markup.raw.markdown_inline"] = { fg = colors.sky, bg = "#242438" },
 
         --  Zig Highlights --
         ["@function.builtin.zig"] = { fg = colors.peach },
