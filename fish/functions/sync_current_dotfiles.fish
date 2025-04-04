@@ -9,12 +9,12 @@ function sync_current_dotfiles -d 'Update your current config files 󰇚 '
 
     set -l ghq_dotfiles_root (ghq root)/github.com/Kacaii/dotfiles/
 
-    cp -r $ghq_dotfiles_root/fish/config.fish $__fish_config_dir/
-    cp -r $ghq_dotfiles_root/nvim/lua/ ~/.config/nvim/
-    cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim/
-    cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim/
-    cp -r $ghq_dotfiles_root/yazi/theme.toml ~/.config/yazi/
-    cp -r $ghq_dotfiles_root/lazygit/config.yml ~/.config/lazygit/
+    cp -r $ghq_dotfiles_root/fish/config.fish $__fish_config_dir
+    cp -r $ghq_dotfiles_root/nvim/lua/ ~/.config/nvim
+    cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim
+    cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim
+    cp -r $ghq_dotfiles_root/yazi/theme.toml ~/.config/yazi
+    cp -r $ghq_dotfiles_root/lazygit/config.yml ~/.config/lazygit
 
     # Custom Fish Functions
     set -l custom_fish_functions \
