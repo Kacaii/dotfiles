@@ -13,7 +13,17 @@ function sync_current_dotfiles -d 'Update your current config files 󰇚 '
     cp -r $ghq_dotfiles_root/nvim/lua/ ~/.config/nvim
     cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim
     cp -r $ghq_dotfiles_root/nvim/snippets/ ~/.config/nvim
+
+    # Yazi directory needs to exist.
+    if not test -e ~/.config/yazi
+        mkdir ~/.config/yazi
+    end
     cp -r $ghq_dotfiles_root/yazi/theme.toml ~/.config/yazi
+
+    # Lazygit directory needs to exist.
+    if not test -e ~/.config/lazygit
+        mkdir ~/.config/lazygit
+    end
     cp -r $ghq_dotfiles_root/lazygit/config.yml ~/.config/lazygit
 
     # Custom Fish Functions
