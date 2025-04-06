@@ -6,12 +6,19 @@
 #  Fish Shell     $ brew install fish
 #  GHQ             $ brew install ghq
 function basic_custom_setup
-    set ensure_installed \
+    # Homebrew Software
+    set ensure_installed_homebrew \
         bat \
-        bat-extras \
+        batdiff \
+        batgrep \
+        batman \
+        batpipe \
+        batwatch \
         deno \
         docker \
         fd \
+        fish \
+        fish-lsp \
         fzf \
         gh \
         ghq \
@@ -21,23 +28,45 @@ function basic_custom_setup
         lazygit \
         lua \
         luarocks \
-        neovim \
         node \
-        php \
-        ripgrep \
-        sqlite \
+        nvim \
+        prettybat \
+        rg \
+        sqlite3 \
         tmux \
         tree \
         tree-sitter \
         xclip \
         yazi \
-        zig
-    for formulae in $ensure_installed
-        if not which -s $formulae
+        zig \
+        zoxide
+
+    # Install missing formulaes
+    for formulae in $ensure_installed_homebrew
+        if not type -q $formulae
             brew install -q $formulae
         end
     end
 
-    # sync_current_dotfiles
-    fish_update_completions
+    if not type -q fisher
+        curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+    end
+
+    # Fisher Plugins
+    set -l ensure_installed_fisher \
+        jorgebucaran/fisher \
+        jethrokuan/z \
+        decors/fish-ghq \
+        catppuccin/fish \
+        decors/fish-colored-man \
+        patrickf1/fzf.fish \
+        jorgebucaran/autopair.fish
+
+    for fisher_plugin in $ensure_installed_fisher
+        # Install missing fisher plugins
+        if not contains $fisher_plugin (cat $__fish_config_dir/fish_plugins)
+            fisher install $fisher_plugin
+        end
+    end
+
 end
