@@ -1,6 +1,6 @@
 {
   "GeneralPurposeAllocator": {
-    "prefix": "dbal",
+    "prefix": "gpa",
     "description": "Boilerplate for a Debug and SPM memory allocators ",
     "body": [
       "var debug_allocator: std.heap.DebugAllocator(.{}) = .init;",
