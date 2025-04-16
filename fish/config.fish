@@ -61,6 +61,7 @@ if status is-interactive
 
     #  Zig Abbreviations
     abbr zbr "zig build run"
+    abbr zbrw "zig build -Dtarget=x86_64-windows run"
     abbr zbt "zig build test --summary all"
 
     #  Tmux Abbreviations
