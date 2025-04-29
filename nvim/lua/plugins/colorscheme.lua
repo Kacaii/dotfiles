@@ -82,6 +82,7 @@ return {
 
         ["@markup.quote"] = { fg = colors.pink },
         ["@markup.raw.markdown_inline"] = { fg = colors.sky, bg = "#242438" },
+        ["@markup.heading.git_config"] = { fg = colors.maroon },
 
         --  Zig Highlights --
         ["@function.builtin.zig"] = { fg = colors.peach },

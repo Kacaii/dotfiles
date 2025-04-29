@@ -22,6 +22,7 @@ function basic_custom_setup
         fzf \
         gh \
         ghq \
+        gleam \
         go \
         httpie \
         lazydocker \

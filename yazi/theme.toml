@@ -751,7 +751,7 @@ exts = [
   { name = "xz", text = "", fg = "#fab387" },
   { name = "yaml", text = "", fg = "#7f849c" },
   { name = "yml", text = "", fg = "#7f849c" },
-  { name = "zig", text = "", fg = "#fab387" },
+  { name = "zig", text = "", fg = "#f9e2af" },
   { name = "zip", text = "", fg = "#fab387" },
   { name = "zsh", text = "", fg = "#a6e3a1" },
   { name = "zst", text = "", fg = "#fab387" },
