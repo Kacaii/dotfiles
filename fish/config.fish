@@ -52,6 +52,7 @@ if status is-interactive
     abbr man batman
     abbr v nvim
     abbr lla "ll -a"
+    abbr fcp fish_clipboard_copy
 
     #  Git Abreviations
     abbr g git

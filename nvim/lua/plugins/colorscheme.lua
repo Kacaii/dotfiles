@@ -61,7 +61,7 @@ return {
         LineNr = { fg = colors.overlay1 }, -- Line numbers
         Label = { fg = colors.blue },
 
-        -- Making the float window same color as the bg. --
+        --  Making the float window same color as the bg. --
         NormalFloat = { fg = colors.text, bg = colors.none },
         FloatBorder = { fg = colors.text, bg = colors.none },
 
@@ -80,6 +80,7 @@ return {
         RenderMarkdownH5Bg = { bg = colors.base },
         RenderMarkdownCodeInline = { bg = colors.mantle },
 
+        --  Markup --
         ["@markup.quote"] = { fg = colors.pink },
         ["@markup.raw.markdown_inline"] = { fg = colors.sky, bg = "#242438" },
         ["@markup.heading.git_config"] = { fg = colors.maroon },
@@ -92,6 +93,9 @@ return {
         ["@lsp.type.property.zig"] = { fg = colors.text },
         ["@lsp.type.struct.zig"] = { fg = colors.yellow },
         ["@variable.parameter.zig"] = { fg = colors.yellow },
+
+        --  Gleam Highlights --
+        ["@constant.builtin.gleam"] = { fg = colors.sky },
 
         -- 󱐀 Completion --
         Pmenu = { bg = colors.none },

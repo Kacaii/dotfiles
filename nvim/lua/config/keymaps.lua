@@ -11,13 +11,8 @@ keymap.set("n", "-", "<C-x>")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G", { noremap = true, silent = true, desc = "[󰒉] Select all" })
 
--- Edit ColorScheme
-keymap.set(
-  "n",
-  "<leader>uu",
-  "<cmd>e ~/.config/nvim/lua/plugins/colorscheme.lua<CR>",
-  { noremap = true, silent = true, desc = "[] Update ColorScheme" }
-)
+-- Restart LSP Server
+keymap.set("n", "<leader>uu", ":LspRestart<Return>", { noremap = true, silent = true, desc = "[] Restart LSP " })
 
 -- Split window
 -- keymap.set("n", "ss", ":vsplit<Return>", opts)
