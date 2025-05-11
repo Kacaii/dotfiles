@@ -58,12 +58,15 @@ return {
         Comment = { fg = colors.overlay1 },
         Type = { fg = colors.yellow },
         LspInlayHint = { fg = colors.overlay1, bg = "#242438" },
-        LineNr = { fg = colors.overlay1 }, -- Line numbers
         Label = { fg = colors.blue },
+
+        LineNrAbove = { fg = colors.overlay1 },
+        LineNr = { fg = colors.mauve },
+        LineNrBelow = { fg = colors.overlay1 },
 
         --  Making the float window same color as the bg. --
         NormalFloat = { fg = colors.text, bg = colors.none },
-        FloatBorder = { fg = colors.text, bg = colors.none },
+        FloatBorder = { fg = colors.lavender, bg = colors.none },
 
         rainbow1 = { fg = colors.mauve }, -- Previously RED
         rainbow2 = { fg = colors.maroon }, -- Previously PEACH

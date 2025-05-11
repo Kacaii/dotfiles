@@ -22,10 +22,7 @@ return {
       kinds = {
         Enum = "󰈲 ",
         EnumMember = " ",
-        Variable = "󰫧 ",
-        Text = " ",
-        Method = "󰡱 ",
-        Function = "󰡱 ",
+        Variable = " ",
       },
     },
   },
