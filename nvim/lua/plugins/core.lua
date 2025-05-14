@@ -23,6 +23,7 @@ return {
         Enum = "󰈲 ",
         EnumMember = " ",
         Variable = " ",
+        file = "",
       },
     },
   },

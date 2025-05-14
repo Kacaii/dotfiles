@@ -60,9 +60,7 @@ return {
         LspInlayHint = { fg = colors.overlay1, bg = "#242438" },
         Label = { fg = colors.blue },
 
-        LineNrAbove = { fg = colors.overlay1 },
-        LineNr = { fg = colors.mauve },
-        LineNrBelow = { fg = colors.overlay1 },
+        LineNr = { fg = colors.overlay1 },
 
         --  Making the float window same color as the bg. --
         NormalFloat = { fg = colors.text, bg = colors.none },
@@ -85,7 +83,7 @@ return {
 
         --  Markup --
         ["@markup.quote"] = { fg = colors.pink },
-        ["@markup.raw.markdown_inline"] = { fg = colors.sky, bg = "#242438" },
+        ["@markup.raw.markdown_inline"] = { fg = colors.sky, bg = colors.surface0 },
         ["@markup.heading.git_config"] = { fg = colors.maroon },
 
         --  Zig Highlights --

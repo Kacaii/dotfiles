@@ -39,7 +39,7 @@ return {
       ["package.json"] = { glyph = "󰏓", hl = "MiniIconsOrange" },
 
       -- Lazy
-      ["colorscheme.lua"] = { glyph = "", hl = "MiniIconsPurple" },
+      ["colorscheme.lua"] = { glyph = "", hl = "MiniIconsPurple" },
       ["core.lua"] = { glyph = "", hl = "MiniIconsGreen" },
       ["disable.lua"] = { glyph = "", hl = "MiniIconsRed" },
       ["keymaps.lua"] = { glyph = "󰌌", hl = "MiniIconsOrange" },
